@@ -113,52 +113,50 @@ Here is the current state of the project so you understand what exists:
 
 ## QUICK REFERENCE: WIKI STRUCTURE
 
-```
-docs/
-├── index.md
-├── core-concepts.md
-├── getting-started.md
-├── example.md
-├── sprint-workflow.md
-├── orchestration.md
-├── setup.md
-├── prompts.md
-├── domain-adaptations.md
-├── troubleshooting.md
-├── quick-reference.md
-├── glossary.md
-├── lifecycle/
-│   ├── index.md
-│   ├── 01-research.md
-│   ├── 02-initial-development.md
-│   ├── 03-testing.md
-│   ├── 04-documentation.md
-│   ├── 05-full-scale-development.md
-│   ├── 06-reflection-loop.md
-│   ├── 07-deployment.md
-│   └── 08-resumption.md
-├── modes/
-│   ├── index.md
-│   ├── quick-patch.md
-│   ├── feature-sprint.md
-│   ├── refactor-migration.md
-│   ├── data-ingestion.md
-│   ├── style-audit.md
-│   └── parallel-sprints.md
-└── file-reference/
+    docs/
     ├── index.md
-    ├── agents.md
-    ├── state.md
-    ├── domain.md
-    ├── decisions.md
-    ├── commands.md
-    ├── style-guide.md
-    ├── security.md
-    ├── git-strategy.md
-    ├── prompt-changelog.md
-    ├── sprint-files.md
-    └── planning-files.md
-```
+    ├── core-concepts.md
+    ├── getting-started.md
+    ├── example.md
+    ├── sprint-workflow.md
+    ├── orchestration.md
+    ├── setup.md
+    ├── prompts.md
+    ├── domain-adaptations.md
+    ├── troubleshooting.md
+    ├── quick-reference.md
+    ├── glossary.md
+    ├── lifecycle/
+    │   ├── index.md
+    │   ├── 01-research.md
+    │   ├── 02-initial-development.md
+    │   ├── 03-testing.md
+    │   ├── 04-documentation.md
+    │   ├── 05-full-scale-development.md
+    │   ├── 06-reflection-loop.md
+    │   ├── 07-deployment.md
+    │   └── 08-resumption.md
+    ├── modes/
+    │   ├── index.md
+    │   ├── quick-patch.md
+    │   ├── feature-sprint.md
+    │   ├── refactor-migration.md
+    │   ├── data-ingestion.md
+    │   ├── style-audit.md
+    │   └── parallel-sprints.md
+    └── file-reference/
+        ├── index.md
+        ├── agents.md
+        ├── state.md
+        ├── domain.md
+        ├── decisions.md
+        ├── commands.md
+        ├── style-guide.md
+        ├── security.md
+        ├── git-strategy.md
+        ├── prompt-changelog.md
+        ├── sprint-files.md
+        └── planning-files.md
 
 ---
 

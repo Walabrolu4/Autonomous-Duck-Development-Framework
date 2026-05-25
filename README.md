@@ -140,7 +140,7 @@ Documentation → Full-Scale Development → Reflection Loop →
 Deployment & Maintenance → Resumption (repeat)
 ```
 
-The full lifecycle, all operating modes, prompt catalog, file templates, and troubleshooting guide are in [`docs/Autonomous_Duck_Deployment_Framework_v3.md`](docs/Autonomous_Duck_Deployment_Framework_v3.md).
+The full lifecycle, all operating modes, prompt catalog, file templates, and troubleshooting guide are in the **[ADDF Wiki](docs/index.md)**.
 
 ---
 
@@ -180,9 +180,26 @@ This framework applies that discipline at scale. The Markdown files are the duck
 
 ---
 
-## Full Documentation
+## Documentation
 
-📄 [`docs/Autonomous_Duck_Deployment_Framework_v3.md`](docs/Autonomous_Duck_Deployment_Framework_v3.md) — Complete framework with all prompts, templates, lifecycle steps, operating modes, troubleshooting, and glossary.
+The ADDF wiki lives in `docs/` and covers every aspect of the framework in a navigable, cross-linked format.
+
+**[→ Open the Wiki](docs/index.md)**
+
+| Section | What's There |
+|---------|-------------|
+| [Getting Started](docs/getting-started.md) | Step-by-step first session walkthrough |
+| [Core Concepts](docs/core-concepts.md) | The 8 terms every practitioner must understand |
+| [Sprint Workflow](docs/sprint-workflow.md) | The 10-step daily operating loop |
+| [Prompt Catalog](docs/prompts.md) | All 9 copy-paste prompts, verbatim |
+| [File Reference](docs/file-reference/index.md) | Templates for every tracking file |
+| [Operating Modes](docs/modes/index.md) | Choosing the right mode for each task |
+| [The 8-Step Lifecycle](docs/lifecycle/index.md) | The full project arc from idea to resumption |
+| [Complete Example](docs/example.md) | Mini Task Tracker — all 8 steps in practice |
+| [Troubleshooting](docs/troubleshooting.md) | What to do when things go wrong |
+| [Glossary](docs/glossary.md) | Full definitions of all framework terms |
+
+The original source document is at [`docs/PDF/Autonomous_Duck_Deployment_Framework_v3.md`](docs/PDF/Autonomous_Duck_Deployment_Framework_v3.md) for reference.
 
 ---
 
