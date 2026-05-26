@@ -3,11 +3,6 @@
 > A file-first methodology for coordinating LLM-assisted research, design, development, review, handoff, and long-term project evolution.
 
 **Framework version:** 3.5  
-**Short name:** ADDF  
-**Primary principle:** The files are the project.  
-**Operating modes:** Research Mode, Design Mode, Develop Mode  
-**Work scale:** Project → Release → Feature → Sprint → Patch  
-**Lifecycle:** Research → Design & feasibility → Validation → Architecture → Sprint planning → Build & test → Review & reflection → Deploy, maintain, or resume
 
 ---
 
