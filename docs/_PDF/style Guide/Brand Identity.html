@@ -1,0 +1,1558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ADDF — Brand Identity</title>
+<meta name="viewport" content="width=1320">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --yolk: #F5C518;
+    --yolk-deep: #E2B00B;
+    --ink: #14110D;
+    --ink-soft: #2A2620;
+    --paper: #F6F1E4;
+    --paper-warm: #EFE7D2;
+    --pond: #1B4D3E;
+    --beak: #E89A1F;
+    --mist: #E6DFCB;
+    --rule: #DDD2B5;
+    --white: #FDFBF5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); }
+  body {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .stage { width: 1280px; margin: 0 auto; padding: 0 0 120px; }
+
+  /* --- Type scale --- */
+  .serif { font-family: "Instrument Serif", serif; font-weight: 400; }
+  .mono { font-family: "JetBrains Mono", monospace; }
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  h1, h2, h3 { letter-spacing: -0.02em; }
+
+  /* --- Section frame --- */
+  .frame {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    margin-top: 24px;
+    position: relative;
+  }
+  .frame.flush { background: transparent; border: none; padding: 0; }
+  .frame .label {
+    position: absolute;
+    top: -10px;
+    left: 24px;
+    background: var(--paper);
+    padding: 0 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .frame .label .num { color: var(--yolk-deep); margin-right: 8px; }
+
+  /* --- Page header --- */
+  .header {
+    padding: 48px 0 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 8px;
+  }
+  .header .left { display: flex; align-items: center; gap: 14px; }
+  .header .mark-sm { width: 36px; height: 36px; }
+  .header .title { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
+  .header .title em { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; color: var(--ink-soft); }
+  .header .meta { display: flex; gap: 28px; align-items: center; }
+  .header .meta span { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+
+  /* === Hero === */
+  .hero {
+    background: var(--yolk);
+    border-radius: 8px;
+    padding: 72px 64px 56px;
+    margin-top: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(20,17,13,0.18) 1px, transparent 0);
+    background-size: 24px 24px;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+    position: relative;
+  }
+  .hero-top .corner { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+    position: relative;
+  }
+  .hero-mark { display: flex; align-items: center; justify-content: center; }
+  .hero-mark svg, .hero-mark img { width: 100%; max-width: 460px; height: auto; display: block; }
+  .hero-words { color: var(--ink); }
+  .hero-words .kicker {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-words .kicker::before {
+    content: "";
+    width: 28px; height: 2px;
+    background: var(--ink);
+  }
+  .hero-words h1 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    margin-bottom: 28px;
+  }
+  .hero-words h1 em { font-style: italic; }
+  .hero-words .lede {
+    font-size: 19px;
+    line-height: 1.45;
+    max-width: 440px;
+    color: var(--ink);
+  }
+  .hero-words .lede strong { font-weight: 600; }
+  .hero-foot {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(20,17,13,0.18);
+    padding-top: 20px;
+    position: relative;
+  }
+  .hero-foot .quack {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: 32px;
+  }
+  .hero-foot .right { display: flex; gap: 32px; }
+  .hero-foot .right div { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+  .hero-foot .right div span { display: block; color: var(--ink); opacity: 0.55; margin-bottom: 4px; }
+
+  /* === Principles row === */
+  .principles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    margin-top: 64px;
+  }
+  .principle {
+    padding: 32px 28px 32px 0;
+    border-right: 1px solid var(--rule);
+  }
+  .principle:last-child { border-right: none; padding-right: 0; }
+  .principle:not(:first-child) { padding-left: 28px; }
+  .principle .num {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--yolk-deep);
+    margin-bottom: 16px;
+    letter-spacing: 0.1em;
+  }
+  .principle h3 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .principle h3 em { font-style: italic; color: var(--ink-soft); }
+  .principle p { font-size: 14.5px; line-height: 1.55; color: var(--ink-soft); }
+
+  /* === Section heading === */
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 96px 0 24px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 32px;
+  }
+  .section-head .left { max-width: 720px; }
+  .section-head .eyebrow { margin-bottom: 16px; }
+  .section-head h2 {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .section-head h2 em { font-style: italic; }
+  .section-head .right {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    max-width: 320px;
+    text-align: right;
+    line-height: 1.55;
+    padding-bottom: 8px;
+  }
+
+  /* === The Mark section === */
+  .mark-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24px;
+  }
+  .mark-hero {
+    background: var(--paper-warm);
+    border-radius: 4px;
+    padding: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+    position: relative;
+  }
+  .mark-hero svg, .mark-hero img { width: 100%; max-width: 380px; height: auto; display: block; }
+  .mark-hero .tag {
+    position: absolute;
+    top: 16px; left: 20px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .mark-side { display: flex; flex-direction: column; gap: 24px; }
+  .mark-mini {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 132px;
+    position: relative;
+  }
+  .mark-mini.dark { background: var(--ink); }
+  .mark-mini.pond { background: var(--pond); }
+  .mark-mini.yolk { background: var(--yolk); }
+  .mark-mini .tag {
+    position: absolute;
+    top: 12px; left: 14px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .mark-mini.dark .tag, .mark-mini.pond .tag { color: rgba(246,241,228,0.65); }
+  .mark-mini svg, .mark-mini img { width: 100%; max-width: 200px; height: auto; display: block; }
+
+  /* === Logo construction === */
+  .construction {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .construction .cell {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 28px;
+    min-height: 200px;
+    position: relative;
+  }
+  .construction .cell h4 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  .construction .cell p {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .construction .visual { display: flex; align-items: center; justify-content: center; padding: 12px 0; }
+
+  /* === Sizes row === */
+  .sizes {
+    margin-top: 24px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 40px 32px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .sizes .size { text-align: center; }
+  .sizes .size svg, .sizes .size img { display: block; margin: 0 auto 16px; height: auto; }
+  .sizes .size .label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* === Color === */
+  .swatches {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 16px;
+  }
+  .swatch {
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+  }
+  .swatch .chip {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .swatch .chip .nm {
+    font-family: "Instrument Serif", serif;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .swatch .chip .role {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .swatch .meta {
+    background: var(--white);
+    padding: 14px 20px 16px;
+    border-top: 1px solid var(--rule);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .swatch .meta b { color: var(--ink); font-weight: 500; }
+  .swatch.yolk .chip { background: var(--yolk); color: var(--ink); }
+  .swatch.ink .chip { background: var(--ink); color: var(--paper); }
+  .swatch.paper .chip { background: var(--paper); color: var(--ink); }
+  .swatch.pond .chip { background: var(--pond); color: var(--paper); }
+  .swatch.beak .chip { background: var(--beak); color: var(--ink); }
+
+  .color-ratio {
+    margin-top: 24px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .color-ratio h4 {
+    font-family: "Instrument Serif", serif;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+  .color-ratio .desc { font-size: 13px; color: var(--ink-soft); }
+  .color-ratio .bar {
+    display: flex;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .color-ratio .bar > div {
+    display: flex; align-items: center; padding: 0 14px;
+  }
+
+  /* === Type === */
+  .type-display {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 48px 40px;
+    position: relative;
+  }
+  .type-display .specimen-1 {
+    font-family: "Instrument Serif", serif;
+    font-size: 124px;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+  }
+  .type-display .specimen-1 em { font-style: italic; color: var(--yolk-deep); }
+  .type-display .row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
+    padding: 18px 0;
+    border-top: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  .type-display .row .name {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+  }
+  .type-display .row .name b { display: block; color: var(--ink); font-weight: 500; margin-bottom: 4px; }
+  .type-display .row .sample.serif { font-family: "Instrument Serif", serif; font-size: 28px; line-height: 1.1; }
+  .type-display .row .sample.sans { font-family: "Space Grotesk", sans-serif; font-size: 18px; }
+  .type-display .row .sample.mono { font-family: "JetBrains Mono", monospace; font-size: 14px; }
+
+  /* === Motifs === */
+  .motifs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .motif {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 32px;
+    min-height: 280px;
+    position: relative;
+    overflow: hidden;
+  }
+  .motif h4 {
+    font-family: "Instrument Serif", serif;
+    font-size: 26px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .motif p { font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); max-width: 360px; }
+  .motif .demo { margin-top: 32px; display: flex; align-items: center; justify-content: center; }
+  .motif.dark { background: var(--ink); color: var(--paper); }
+  .motif.dark h4 { color: var(--paper); }
+  .motif.dark p { color: rgba(246,241,228,0.65); }
+  .motif.pond { background: var(--pond); color: var(--paper); }
+  .motif.pond h4 { color: var(--paper); }
+  .motif.pond p { color: rgba(246,241,228,0.7); }
+
+  /* Voice */
+  .voice-list { margin-top: 24px; display: flex; flex-direction: column; gap: 8px; }
+  .voice-row {
+    display: grid;
+    grid-template-columns: 1fr 24px 1fr;
+    gap: 16px;
+    align-items: center;
+    padding: 14px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .voice-row .arrow { color: var(--ink-soft); font-family: "JetBrains Mono", monospace; text-align: center; }
+  .voice-row .no { color: var(--ink-soft); }
+  .voice-row .no s { color: var(--ink-soft); }
+  .voice-row .yes { font-family: "Instrument Serif", serif; font-size: 19px; font-style: italic; }
+  .voice-row .lbl {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* === Lifecycle diagram === */
+  .lifecycle {
+    background: var(--ink);
+    border-radius: 4px;
+    padding: 56px 48px 48px;
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .lifecycle .lc-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 48px;
+  }
+  .lifecycle .lc-head h3 {
+    font-family: "Instrument Serif", serif;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    max-width: 520px;
+  }
+  .lifecycle .lc-head h3 em { font-style: italic; color: var(--yolk); }
+  .lifecycle .lc-head .meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(246,241,228,0.55);
+    text-align: right;
+  }
+  .lifecycle .lc-head .meta b { color: var(--yolk); display: block; margin-bottom: 4px; }
+
+  .lc-svg-wrap { position: relative; }
+  .lc-svg-wrap svg { width: 100%; height: auto; display: block; }
+
+  .lc-legend {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 32px;
+    border-top: 1px solid rgba(246,241,228,0.12);
+    padding-top: 28px;
+  }
+  .lc-legend .item .n {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: var(--yolk);
+    margin-bottom: 6px;
+  }
+  .lc-legend .item .t {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .lc-legend .item .d {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10.5px;
+    color: rgba(246,241,228,0.55);
+    line-height: 1.55;
+  }
+
+  /* === Dual mode === */
+  .dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .dual .col { padding: 40px 36px; position: relative; }
+  .dual .col:first-child { border-right: 1px solid var(--rule); background: var(--paper); }
+  .dual .col .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--yolk-deep);
+    margin-bottom: 14px;
+  }
+  .dual .col h3 {
+    font-family: "Instrument Serif", serif;
+    font-size: 44px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+  .dual .col h3 em { font-style: italic; }
+  .dual .col .sub {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+  }
+  .dual .col .bullets {
+    list-style: none;
+    border-top: 1px solid var(--rule);
+  }
+  .dual .col .bullets li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 12px;
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+  .dual .col .bullets li::before {
+    content: "+";
+    font-family: "JetBrains Mono", monospace;
+    color: var(--yolk-deep);
+    font-weight: 600;
+  }
+  .dual .col .bullets li.minus::before {
+    content: "−";
+    color: var(--ink-soft);
+  }
+  .dual .col .bullets li.minus { color: var(--ink-soft); }
+  .dual .col .icon {
+    position: absolute;
+    top: 36px; right: 36px;
+    width: 56px; height: 56px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* === Permission table === */
+  .perm {
+    margin-top: 24px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .perm .row {
+    display: grid;
+    grid-template-columns: 56px 180px 1fr 100px;
+    gap: 24px;
+    padding: 18px 28px;
+    border-bottom: 1px solid var(--rule);
+    align-items: center;
+  }
+  .perm .row:last-child { border-bottom: none; }
+  .perm .row.head {
+    background: var(--paper-warm);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .perm .lv {
+    font-family: "Instrument Serif", serif;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--yolk-deep);
+  }
+  .perm .name { font-weight: 600; font-size: 15px; }
+  .perm .desc { font-size: 13.5px; color: var(--ink-soft); line-height: 1.5; }
+  .perm .risk {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-align: right;
+  }
+  .perm .risk .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+
+  /* === Landing hero applied === */
+  .applied-hero {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .applied-hero .browser {
+    background: var(--paper-warm);
+    border-bottom: 1px solid var(--rule);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--ink-soft);
+  }
+  .applied-hero .browser .dots { display: flex; gap: 6px; }
+  .applied-hero .browser .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rule); }
+  .applied-hero .browser .url {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 5px 12px;
+    flex: 1;
+    max-width: 380px;
+  }
+  .applied-hero .browser .url b { color: var(--ink); font-weight: 500; }
+  .applied-hero .browser .nav { display: flex; gap: 18px; }
+  .applied-hero .body {
+    padding: 56px 64px 72px;
+    background: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .applied-hero .body::after {
+    content: "";
+    position: absolute;
+    right: -200px; top: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(245,197,24,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .applied-hero .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    position: relative;
+  }
+  .applied-hero .nav-bar .logo { display: flex; align-items: center; gap: 10px; }
+  .applied-hero .nav-bar .logo svg, .applied-hero .nav-bar .logo img { width: 36px; height: auto; }
+  .applied-hero .nav-bar .logo .nm { font-weight: 600; font-size: 15px; letter-spacing: -0.005em; }
+  .applied-hero .nav-bar .nav { display: flex; gap: 28px; }
+  .applied-hero .nav-bar .nav a {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+  .applied-hero .nav-bar .cta {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .applied-hero h1 {
+    font-family: "Instrument Serif", serif;
+    font-size: 92px;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    max-width: 900px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+  .applied-hero h1 em { font-style: italic; color: var(--yolk-deep); }
+  .applied-hero .lede {
+    font-size: 20px;
+    line-height: 1.45;
+    max-width: 620px;
+    color: var(--ink-soft);
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .applied-hero .ctas { display: flex; gap: 12px; margin-bottom: 56px; position: relative; }
+  .applied-hero .btn-primary {
+    background: var(--yolk);
+    color: var(--ink);
+    padding: 14px 22px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14.5px;
+    border: 1px solid var(--yolk-deep);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .applied-hero .btn-primary .arrow { font-family: "JetBrains Mono", monospace; }
+  .applied-hero .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    padding: 14px 22px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14.5px;
+    border: 1px solid var(--ink);
+    font-family: "JetBrains Mono", monospace;
+  }
+  .applied-hero .terminal {
+    background: var(--ink);
+    border-radius: 6px;
+    padding: 22px 26px;
+    max-width: 720px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    color: var(--paper);
+    position: relative;
+    box-shadow: 0 24px 56px -24px rgba(20,17,13,0.4);
+  }
+  .applied-hero .terminal .line { line-height: 1.7; }
+  .applied-hero .terminal .prompt { color: var(--yolk); margin-right: 8px; }
+  .applied-hero .terminal .comment { color: rgba(246,241,228,0.45); }
+  .applied-hero .terminal .cursor {
+    display: inline-block;
+    width: 8px; height: 14px;
+    background: var(--yolk);
+    vertical-align: -2px;
+    animation: blink 1.1s infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* === Misuse === */
+  .misuse {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .misuse .cell {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .misuse .cell .lbl {
+    position: absolute;
+    bottom: 12px; left: 14px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .misuse .cell .x {
+    position: absolute;
+    top: 12px; right: 14px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+  }
+  .misuse .cell.ok .x { background: var(--pond); }
+
+  /* === Footer === */
+  .closer {
+    margin-top: 120px;
+    background: var(--yolk);
+    border-radius: 8px;
+    padding: 80px 64px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .closer .quack {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    font-size: 240px;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+  }
+  .closer .quack span { color: var(--ink); }
+  .closer .meta {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(20,17,13,0.18);
+    padding-top: 24px;
+  }
+  .closer .meta .left { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+  .closer .meta .left b { display: block; margin-bottom: 4px; }
+  .closer .meta .right { font-family: "JetBrains Mono", monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; }
+
+  /* === Logo svg internals === */
+  .duck-mark { display: block; }
+  img.duck { display: block; max-width: 100%; height: auto; }
+  img.mark-sm { width: 36px; height: auto; }
+</style>
+</head>
+<body>
+
+<!-- =================== REUSABLE LOGO MARK =================== -->
+<!-- The duck mark. Used everywhere. Drawn once via <symbol>. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!--
+      Duck mark — simplified, modern, monochromatic.
+      Left-facing duck silhouette + 3 AI circuit traces with ring terminations.
+      All shapes use currentColor except the eye (always a warm dark) so the mark
+      inverts cleanly between yolk-on-paper, ink-on-yolk, yolk-on-ink, yolk-on-pond.
+    -->
+    <symbol id="duck" viewBox="0 0 280 160">
+      <!-- Single continuous silhouette: head sits as a clear hump above the body.
+           Drawn clockwise from chest, around bottom, up the back, over the head,
+           down the left, out to the beak tip, back to start. -->
+      <path fill="currentColor"
+            d="M 64 76
+               C 36 78, 22 96, 24 118
+               C 26 138, 46 148, 70 148
+               L 168 148
+               C 200 148, 220 132, 220 108
+               C 220 86, 200 70, 170 64
+               C 154 62, 142 56, 134 46
+               C 124 24, 104 14, 84 14
+               C 60 14, 44 32, 44 52
+               L 14 58
+               L 50 68
+               C 56 72, 60 74, 64 76 Z"/>
+      <!-- Eye -->
+      <circle cx="80" cy="38" r="6.5" fill="#2A2620"/>
+      <!-- Wing tuck (subtle darker tone, body color agnostic) -->
+      <path d="M 78 96 Q 122 86 168 100 Q 142 122 106 120 Q 78 112 78 96 Z"
+            fill="rgba(20,17,13,0.18)"/>
+
+      <!-- AI circuit traces from the back -->
+      <g stroke="currentColor" stroke-width="7" fill="none"
+         stroke-linecap="round" stroke-linejoin="round">
+        <path d="M 218 88 L 236 88 L 246 98"/>
+        <path d="M 220 110 L 258 110"/>
+        <path d="M 218 132 L 236 132 L 246 142"/>
+      </g>
+      <g stroke="currentColor" stroke-width="7" fill="none">
+        <circle cx="254" cy="104" r="9"/>
+        <circle cx="268" cy="110" r="9"/>
+        <circle cx="254" cy="148" r="9"/>
+      </g>
+    </symbol>
+
+    <!-- Alias kept so older references still resolve -->
+    <symbol id="duck-cli" viewBox="0 0 280 160">
+      <use href="#duck"/>
+    </symbol>
+
+    <!-- Wordmark only -->
+    <symbol id="wordmark" viewBox="0 0 320 40">
+      <text x="0" y="30" font-family="Instrument Serif, serif" font-size="40" fill="currentColor" letter-spacing="-1">ADDF<tspan font-style="italic" dx="6">/</tspan><tspan font-family="Space Grotesk, sans-serif" font-size="14" dx="6" font-weight="600">Autonomous Duck Deployment Framework</tspan></text>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="stage">
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <div class="left">
+      <img class="mark-sm duck" src="assets/duck-logo.png" alt="ADDF">
+      <div class="title">ADDF <em>· brand identity, v1</em></div>
+    </div>
+    <div class="meta">
+      <span>22 sections</span>
+      <span>QUACK!</span>
+      <span>May 2026</span>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-top">
+      <div class="corner">A · D · D · F</div>
+      <div class="corner">v1.2 — Flow &amp; Readability Edition</div>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-mark">
+        <img class="duck" src="assets/duck-logo-ink.png" alt="ADDF">
+      </div>
+      <div class="hero-words">
+        <div class="kicker">A deterministic system / for AI-assisted dev</div>
+        <h1>A rubber duck<br><em>that ships code.</em></h1>
+        <p class="lede">A planning-first methodology for AI-assisted software development. <strong>Architect plans. Builder builds. The files remember.</strong> Chat windows are disposable; the project brain lives on disk.</p>
+      </div>
+    </div>
+    <div class="hero-foot">
+      <div class="quack">Quack!</div>
+      <div class="right">
+        <div><span>Methodology</span>Context engineering</div>
+        <div><span>Model</span>Dual-mode orchestration</div>
+        <div><span>Brain</span>Local file sovereignty</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THREE PRINCIPLES ===== -->
+  <div class="principles">
+    <div class="principle">
+      <div class="num">01 / Principle</div>
+      <h3>The files <em>are the project.</em></h3>
+      <p>Markdown on disk is the source of truth. AI sessions are interchangeable compute that read the same brain. Close any chat at any time — the project is intact.</p>
+    </div>
+    <div class="principle">
+      <div class="num">02 / Principle</div>
+      <h3>A duck <em>can't invent</em> your business logic.</h3>
+      <p>If the rule isn't written down, the AI invents one. Specifications come from the human; execution comes from the model. Improvisation bias dies at the dry-run gate.</p>
+    </div>
+    <div class="principle">
+      <div class="num">03 / Principle</div>
+      <h3>Cleaner context <em>beats more context.</em></h3>
+      <p>Big context windows don't fix vibe coding — they extend it. Each session gets only the files it needs for the job in front of it. Nothing more.</p>
+    </div>
+  </div>
+
+  <!-- ===== SECTION: THE MARK ===== -->
+  <div class="section-head">
+    <div class="left">
+      <div class="eyebrow">§01 — The Mark</div>
+      <h2>A duck, <em>wired in.</em></h2>
+    </div>
+    <div class="right">A rubber duck (the debugging mascot) trailing three circuit traces (the AI). Two metaphors, one mark. Monochromatic and simple by design.</div>
+  </div>
+
+  <div class="mark-grid">
+    <div class="mark-hero">
+      <span class="tag">Primary lockup · color positive</span>
+      <img class="duck" src="assets/duck-logo.png" alt="ADDF">
+    </div>
+    <div class="mark-side">
+      <div class="mark-mini yolk">
+        <span class="tag">Mark · ink on yolk</span>
+        <img class="duck" src="assets/duck-logo-ink.png" alt="ADDF">
+      </div>
+      <div class="mark-mini dark">
+        <span class="tag">Reverse · on ink</span>
+        <img class="duck" src="assets/duck-logo.png" alt="ADDF">
+      </div>
+      <div class="mark-mini pond">
+        <span class="tag">Pond accent</span>
+        <img class="duck" src="assets/duck-logo.png" alt="ADDF">
+      </div>
+    </div>
+  </div>
+
+  <!-- Construction breakdown -->
+  <div class="construction">
+    <div class="cell">
+      <h4>01 / Silhouette</h4>
+      <div class="visual">
+        <img class="duck" src="assets/duck-logo.png" alt="ADDF" style="width: 180px">
+      </div>
+      <p>One continuous shape — head clearly sits above the body, beak points left, body rounds off at the back. Monochrome. No outline.</p>
+    </div>
+    <div class="cell">
+      <h4>02 / Head &amp; wing</h4>
+      <div class="visual" style="position: relative;">
+        <img class="duck" src="assets/duck-logo.png" alt="" style="width: 200px;">
+        <!-- dotted call-out rings -->
+        <span style="position:absolute; top:38%; left:30%; width:28px; height:28px; border:1px dashed var(--ink); border-radius:50%; opacity:0.5;"></span>
+        <span style="position:absolute; top:62%; left:48%; width:48px; height:36px; border:1px dashed var(--ink); border-radius:50%; opacity:0.5;"></span>
+      </div>
+      <p>Two small details carry the personality — a single dark eye and a curved wing-tuck negative space on the body. Everything else stays monochromatic.</p>
+    </div>
+    <div class="cell">
+      <h4>03 / AI traces</h4>
+      <div class="visual" style="position: relative;">
+        <img class="duck" src="assets/duck-logo.png" alt="" style="width: 200px;">
+        <span style="position:absolute; top:32%; left:62%; width:88px; height:64px; border:1px dashed var(--ink); border-radius:6px; opacity:0.55;"></span>
+      </div>
+      <p>Three circuit traces leave the back of the body, each terminating in an open ring. They say <em>this duck is wired in.</em> Never decorative — they always exit the back of the duck, never the front.</p>
+    </div>
+  </div>
+
+  <!-- Sizes -->
+  <div class="sizes">
+    <div class="size">
+      <img class="duck" src="assets/duck-logo-ink.png" alt="ADDF" style="width: 280px">
+      <div class="label">Large · 280 px · Hero</div>
+    </div>
+    <div class="size">
+      <img class="duck" src="assets/duck-logo-ink.png" alt="ADDF" style="width: 140px">
+      <div class="label">Medium · 140 px · Card</div>
+    </div>
+    <div class="size">
+      <img class="duck" src="assets/duck-logo-ink.png" alt="ADDF" style="width: 56px">
+      <div class="label">Small · 32 px · App icon</div>
+    </div>
+    <div class="size">
+      <img class="duck" src="assets/duck-logo-ink.png" alt="ADDF" style="width: 24px">
+      <div class="label">Micro · 16 px · Favicon</div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION: COLOR ===== -->
+  <div class="section-head">
+    <div class="left">
+      <div class="eyebrow">§02 — Color</div>
+      <h2>Yolk leads. <em>Ink decides. Paper holds.</em></h2>
+    </div>
+    <div class="right">Yellow is the protagonist, not the wallpaper. Pair it generously with warm cream and ink; use pond and beak sparingly as moments.</div>
+  </div>
+
+  <div class="swatches">
+    <div class="swatch yolk">
+      <div class="chip">
+        <div class="role">01 / Primary</div>
+        <div class="nm">Yolk</div>
+      </div>
+      <div class="meta">
+        <b>#F5C518</b><br>RGB 245 197 24<br>OKLCH 0.83 0.16 89
+      </div>
+    </div>
+    <div class="swatch ink">
+      <div class="chip">
+        <div class="role">02 / Anchor</div>
+        <div class="nm">Ink</div>
+      </div>
+      <div class="meta">
+        <b>#14110D</b><br>Type, lines<br>Reverse fields
+      </div>
+    </div>
+    <div class="swatch paper">
+      <div class="chip">
+        <div class="role">03 / Field</div>
+        <div class="nm">Paper</div>
+      </div>
+      <div class="meta">
+        <b>#F6F1E4</b><br>Default canvas<br>Warm, not cold
+      </div>
+    </div>
+    <div class="swatch pond">
+      <div class="chip">
+        <div class="role">04 / Accent</div>
+        <div class="nm">Pond</div>
+      </div>
+      <div class="meta">
+        <b>#1B4D3E</b><br>State, success<br>Use sparingly
+      </div>
+    </div>
+  </div>
+
+  <div class="color-ratio">
+    <div>
+      <h4>Use it 60 / 25 / 10 / 5</h4>
+      <div class="desc">Paper as canvas, ink as voice, yolk as moments, pond as the occasional underline.</div>
+    </div>
+    <div class="bar">
+      <div style="background: var(--paper); flex: 60; color: var(--ink);">Paper 60</div>
+      <div style="background: var(--ink); flex: 25; color: var(--paper);">Ink 25</div>
+      <div style="background: var(--yolk); flex: 10; color: var(--ink);">Yolk 10</div>
+      <div style="background: var(--pond); flex: 5; color: var(--paper);">Pond 5</div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION: TYPE ===== -->
+  <div class="section-head">
+    <div class="left">
+      <div class="eyebrow">§03 — Type</div>
+      <h2>A serif with <em>opinions.</em> A sans that listens.</h2>
+    </div>
+    <div class="right">Instrument Serif speaks for the brand — italic when it has something to say. Space Grotesk does the work. JetBrains Mono labels everything technical.</div>
+  </div>
+
+  <div class="type-display">
+    <div class="specimen-1">Quack<em>!</em></div>
+    <div class="row">
+      <div class="name"><b>Instrument Serif</b>Display · 32–120<br>Italic for emphasis</div>
+      <div class="sample serif">The framework's voice — confident, <em>occasionally wry.</em></div>
+    </div>
+    <div class="row">
+      <div class="name"><b>Space Grotesk</b>UI &amp; body · 14–22<br>Regular &amp; Medium</div>
+      <div class="sample sans">Sprint pack generated. Dry run pending review. Permission level 1 standing by.</div>
+    </div>
+    <div class="row">
+      <div class="name"><b>JetBrains Mono</b>Code &amp; tags · 11–14<br>For machines</div>
+      <div class="sample mono">$ cat AGENTS.md STATE.md DOMAIN.md | claude "compile sprint pack 003"</div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION: VOICE & MOTIFS ===== -->
+  <div class="section-head">
+    <div class="left">
+      <div class="eyebrow">§04 — Voice &amp; Motifs</div>
+      <h2>Serious about the method. <em>Light about ourselves.</em></h2>
+    </div>
+    <div class="right">A duck on every page would be exhausting. Pick the small moments — the cursor, the "Quack!", the ripples — and let the rest of the page do its job.</div>
+  </div>
+
+  <div class="motifs">
+    <div class="motif">
+      <h4>The blinking cursor</h4>
+      <p>Borrowed from the command line. Use it to end headlines, mark a CTA, or punctuate the "Quack!" Never decorative — always saying <em>your turn</em>.</p>
+      <div class="demo">
+        <div style="font-family: 'Instrument Serif', serif; font-size: 56px; line-height: 1;">Your move<span style="display:inline-block; width: 16px; height: 40px; background: var(--yolk); vertical-align: -4px; margin-left: 6px; animation: blink 1.1s infinite;"></span></div>
+      </div>
+    </div>
+    <div class="motif pond">
+      <h4>Ripples on the pond</h4>
+      <p>Concentric rings under any mention of "context", "session", or "reset". A quiet reminder that the framework is about what spreads outward from clear thinking.</p>
+      <div class="demo">
+        <svg width="220" height="80" viewBox="0 0 220 80">
+          <ellipse cx="110" cy="40" rx="14" ry="3" fill="none" stroke="var(--yolk)" stroke-width="1.6"/>
+          <ellipse cx="110" cy="40" rx="32" ry="6" fill="none" stroke="var(--yolk)" stroke-width="1.4" opacity="0.7"/>
+          <ellipse cx="110" cy="40" rx="56" ry="10" fill="none" stroke="var(--yolk)" stroke-width="1.2" opacity="0.5"/>
+          <ellipse cx="110" cy="40" rx="84" ry="14" fill="none" stroke="var(--yolk)" stroke-width="1" opacity="0.3"/>
+        </svg>
+      </div>
+    </div>
+    <div class="motif">
+      <h4>The Quack! footer</h4>
+      <p>It's signed off every page of the framework PDF. Keep it. It's the tonal release valve — proof we know exactly what we sound like, and we do it anyway.</p>
+      <div class="demo">
+        <div style="display:flex; gap:14px; align-items: center;">
+          <span class="eyebrow">ADDF · page 24 of 76 · §6 — Reflection Loop</span>
+          <span style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 24px; color: var(--yolk-deep);">Quack!</span>
+        </div>
+      </div>
+    </div>
+    <div class="motif dark">
+      <h4>Voice rules</h4>
+      <div class="voice-list">
+        <div class="voice-row">
+          <div><span class="lbl" style="color: rgba(246,241,228,0.4)">Don't</span><s>"Our magical AI assistant 🦆"</s></div>
+          <div class="arrow">→</div>
+          <div><span class="lbl" style="color: var(--yolk)">Do</span><span class="yes">"The Builder writes only what the blueprint says."</span></div>
+        </div>
+        <div class="voice-row">
+          <div><span class="lbl" style="color: rgba(246,241,228,0.4)">Don't</span><s>"Get started in 30 seconds!"</s></div>
+          <div class="arrow">→</div>
+          <div><span class="lbl" style="color: var(--yolk)">Do</span><span class="yes">"Your first session — a concrete walkthrough."</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION: APPLIED — LANDING ===== -->
+  <div class="section-head">
+    <div class="left">
+      <div class="eyebrow">§05 — Applied / Landing</div>
+      <h2>The first impression. <em>One page, no slogans.</em></h2>
+    </div>
+    <div class="right">Editorial typography, generous space, one terminal, one duck. The page should read like the framework: serious, structured, with a wink at the end.</div>
+  </div>
+
+  <div class="applied-hero">
+    <div class="browser">
+      <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="url">addf.dev <b>/ a deterministic system for AI-assisted dev</b></div>
+      <div class="nav">addf.dev</div>
+    </div>
+    <div class="body">
+      <div class="nav-bar">
+        <div class="logo">
+          <img class="duck" src="assets/duck-logo.png" alt="ADDF">
+          <div class="nm">ADDF</div>
+        </div>
+        <div class="nav">
+          <a href="#">Framework</a>
+          <a href="#">Lifecycle</a>
+          <a href="#">Prompts</a>
+          <a href="#">Templates</a>
+          <a href="#">GitHub</a>
+        </div>
+        <div class="cta">Read the docs →</div>
+      </div>
+
+      <h1>Stop <em>vibe coding.</em><br>Start shipping on purpose.</h1>
+      <p class="lede">ADDF turns AI-assisted development into a deterministic process. Architect plans the work. Builder writes only the approved plan. The Markdown files on your disk are the project brain — chat windows are disposable.</p>
+      <div class="ctas">
+        <button class="btn-primary">Your first session <span class="arrow">→</span></button>
+        <button class="btn-secondary">$ git clone addf</button>
+      </div>
+
+      <div class="terminal">
+        <div class="line"><span class="comment"># Step 1 — Initialize the project brain</span></div>
+        <div class="line"><span class="prompt">$</span> mkdir addf-project &amp;&amp; cd addf-project</div>
+        <div class="line"><span class="prompt">$</span> touch AGENTS.md STATE.md DOMAIN.md DECISIONS.md</div>
+        <div class="line"><span class="comment"># Step 2 — Run the kickoff interview</span></div>
+        <div class="line"><span class="prompt">$</span> cat AGENTS.md DOMAIN.md | claude "kickoff interview"</div>
+        <div class="line"><span class="prompt">$</span> <span class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION: LIFECYCLE ===== -->
+  <div class="section-head">
+    <div class="left">
+      <div class="eyebrow">§06 — Applied / The 8-step lifecycle</div>
+      <h2>A loop, <em>not a waterfall.</em></h2>
+    </div>
+    <div class="right">The lifecycle is the spine of the framework. Visualized as a circular flow with the file artifacts each step produces or consumes.</div>
+  </div>
+
+  <div class="lifecycle">
+    <div class="lc-head">
+      <h3>From idea to production — and <em>back to step 2</em> for the next feature.</h3>
+      <div class="meta"><b>Loop · not waterfall</b>Step 8 reopens any time</div>
+    </div>
+
+    <div class="lc-svg-wrap">
+      <svg viewBox="0 0 1180 560" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow-y" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#F5C518"/>
+          </marker>
+          <marker id="arrow-p" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(246,241,228,0.4)"/>
+          </marker>
+        </defs>
+
+        <!-- Big circular path connecting nodes -->
+        <ellipse cx="590" cy="280" rx="440" ry="200" fill="none" stroke="rgba(246,241,228,0.08)" stroke-width="1"/>
+        <ellipse cx="590" cy="280" rx="320" ry="140" fill="none" stroke="rgba(246,241,228,0.05)" stroke-width="1" stroke-dasharray="2 6"/>
+
+        <!-- Center duck -->
+        <foreignObject x="440" y="180" width="300" height="200">
+          <div xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+            <img src="assets/duck-logo.png" alt="" style="width:280px;height:auto;">
+          </div>
+        </foreignObject>
+        <text x="590" y="400" text-anchor="middle" fill="rgba(246,241,228,0.45)" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="2.4">THE PROJECT BRAIN</text>
+        <text x="590" y="416" text-anchor="middle" fill="#F5C518" font-family="Instrument Serif, serif" font-style="italic" font-size="20">stays on disk</text>
+
+        <!-- Step nodes -->
+        <!-- positions arranged in an oval -->
+        <!-- Step 1 -->
+        <g transform="translate(140, 110)">
+          <circle cx="0" cy="0" r="38" fill="#F5C518"/>
+          <text x="0" y="6" text-anchor="middle" font-family="Instrument Serif, serif" font-size="32" fill="#14110D">1</text>
+          <text x="0" y="60" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#F6F1E4">Research &amp;</text>
+          <text x="0" y="76" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#F6F1E4">architecture</text>
+          <text x="0" y="94" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(246,241,228,0.5)" letter-spacing="1">DOMAIN.md · RISKS.md</text>
+        </g>
+
+        <!-- Step 2 -->
+        <g transform="translate(370, 60)">
+          <circle cx="0" cy="0" r="32" fill="none" stroke="#F6F1E4" stroke-width="1.5"/>
+          <text x="0" y="6" text-anchor="middle" font-family="Instrument Serif, serif" font-size="28" fill="#F6F1E4">2</text>
+          <text x="0" y="54" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#F6F1E4">Prototype</text>
+          <text x="0" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(246,241,228,0.5)" letter-spacing="1">blueprint.md</text>
+        </g>
+
+        <!-- Step 3 -->
+        <g transform="translate(600, 50)">
+          <circle cx="0" cy="0" r="32" fill="none" stroke="#F6F1E4" stroke-width="1.5"/>
+          <text x="0" y="6" text-anchor="middle" font-family="Instrument Serif, serif" font-size="28" fill="#F6F1E4">3</text>
+          <text x="0" y="54" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#F6F1E4">Testing</text>
+          <text x="0" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(246,241,228,0.5)" letter-spacing="1">acceptance.md</text>
+        </g>
+
+        <!-- Step 4 -->
+        <g transform="translate(830, 60)">
+          <circle cx="0" cy="0" r="32" fill="none" stroke="#F6F1E4" stroke-width="1.5"/>
+          <text x="0" y="6" text-anchor="middle" font-family="Instrument Serif, serif" font-size="28" fill="#F6F1E4">4</text>
+          <text x="0" y="54" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#F6F1E4">Documentation</text>
+          <text x="0" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(246,241,228,0.5)" letter-spacing="1">DECISIONS.md</text>
+        </g>
+
+        <!-- Step 5 -->
+        <g transform="translate(1040, 200)">
+          <circle cx="0" cy="0" r="32" fill="none" stroke="#F6F1E4" stroke-width="1.5"/>
+          <text x="0" y="6" text-anchor="middle" font-family="Instrument Serif, serif" font-size="28" fill="#F6F1E4">5</text>
+          <text x="0" y="54" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#F6F1E4">Full-scale dev</text>
+          <text x="0" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(246,241,228,0.5)" letter-spacing="1">sprints loop</text>
+        </g>
+
+        <!-- Step 6 -->
+        <g transform="translate(1040, 380)">
+          <circle cx="0" cy="0" r="32" fill="none" stroke="#F6F1E4" stroke-width="1.5"/>
+          <text x="0" y="6" text-anchor="middle" font-family="Instrument Serif, serif" font-size="28" fill="#F6F1E4">6</text>
+          <text x="0" y="54" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#F6F1E4">Reflection</text>
+          <text x="0" y="72" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(246,241,228,0.5)" letter-spacing="1">retrospective.md</text>
+        </g>
+
+        <!-- Step 7 -->
+        <g transform="translate(820, 480)">
+          <circle cx="0" cy="0" r="32" fill="none" stroke="#F6F1E4" stroke-width="1.5"/>
+          <text x="0" y="6" text-anchor="middle" font-family="Instrument Serif, serif" font-size="28" fill="#F6F1E4">7</text>
+          <text x="0" y="-44" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#F6F1E4">Deploy</text>
+          <text x="0" y="-28" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(246,241,228,0.5)" letter-spacing="1">rollback_log.md</text>
+        </g>
+
+        <!-- Step 8 - special yolk highlight (resumption is the magic step) -->
+        <g transform="translate(360, 500)">
+          <circle cx="0" cy="0" r="38" fill="#F5C518"/>
+          <text x="0" y="6" text-anchor="middle" font-family="Instrument Serif, serif" font-size="32" fill="#14110D">8</text>
+          <text x="0" y="-58" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600" fill="#F6F1E4">Resumption</text>
+          <text x="0" y="-42" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="rgba(246,241,228,0.5)" letter-spacing="1">load STATE.md → continue</text>
+        </g>
+
+        <!-- Connecting arcs -->
+        <path d="M 178 95 Q 270 50 338 55" stroke="#F5C518" stroke-width="1.6" fill="none" marker-end="url(#arrow-y)"/>
+        <path d="M 402 55 L 568 50" stroke="rgba(246,241,228,0.4)" stroke-width="1.4" fill="none" marker-end="url(#arrow-p)"/>
+        <path d="M 632 50 L 798 55" stroke="rgba(246,241,228,0.4)" stroke-width="1.4" fill="none" marker-end="url(#arrow-p)"/>
+        <path d="M 862 80 Q 980 110 1018 170" stroke="rgba(246,241,228,0.4)" stroke-width="1.4" fill="none" marker-end="url(#arrow-p)"/>
+        <path d="M 1040 232 L 1040 348" stroke="rgba(246,241,228,0.4)" stroke-width="1.4" fill="none" marker-end="url(#arrow-p)"/>
+        <path d="M 1020 410 Q 940 470 852 478" stroke="rgba(246,241,228,0.4)" stroke-width="1.4" fill="none" marker-end="url(#arrow-p)"/>
+        <path d="M 788 482 Q 580 500 398 500" stroke="rgba(246,241,228,0.4)" stroke-width="1.4" fill="none" marker-end="url(#arrow-p)"/>
+        <!-- step 8 back to step 2 (the resumption loop) - special yolk -->
+        <path d="M 332 466 Q 220 380 248 200 Q 270 100 340 75" stroke="#F5C518" stroke-width="1.6" fill="none" stroke-dasharray="4 6" marker-end="url(#arrow-y)"/>
+        <text x="190" y="280" font-family="Instrument Serif, serif" font-style="italic" font-size="16" fill="#F5C518">resume →</text>
+
+      </svg>
+    </div>
+
+    <div class="lc-legend">
+      <div class="item">
+        <div class="n">01 → 02</div>
+        <div class="t">Brain first, code never</div>
+        <div class="d">DOMAIN.md and STATE.md exist before any source file does.</div>
+      </div>
+      <div class="item">
+        <div class="n">02 ⇌ 06</div>
+        <div class="t">Sprints loop</div>
+        <div class="d">Steps 2–6 repeat per feature. Each sprint resets the Builder thread.</div>
+      </div>
+      <div class="item">
+        <div class="n">07</div>
+        <div class="t">Rollback first, deploy second</div>
+        <div class="d">No production push without a rollback command in COMMANDS.md.</div>
+      </div>
+      <div class="item">
+        <div class="n">08 ↺ 02</div>
+        <div class="t">Resume in two minutes</div>
+        <div class="d">Three-week break costs you the time it takes to read STATE.md.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION: DUAL MODE ===== -->
+  <div class="section-head">
+    <div class="left">
+      <div class="eyebrow">§07 — Applied / Dual-mode orchestration</div>
+      <h2>Architect plans. <em>Builder builds.</em></h2>
+    </div>
+    <div class="right">Two modes, any model. The framework doesn't care which AI you use — it cares which mode you've invoked.</div>
+  </div>
+
+  <div class="dual">
+    <div class="col">
+      <div class="tag">Mode 01 / Planning</div>
+      <h3>The <em>Architect.</em></h3>
+      <div class="sub">Senior tech lead who writes the plan but never touches the keyboard.</div>
+      <ul class="bullets">
+        <li>Asks clarifying questions before doing anything</li>
+        <li>Produces requirements.md, blueprint.md, acceptance.md</li>
+        <li>Reviews dry runs, audits builder output</li>
+        <li class="minus">Never writes application source code</li>
+        <li class="minus">Never reads live runtime logs</li>
+      </ul>
+      <div class="icon">
+        <svg viewBox="0 0 56 56" width="56" height="56">
+          <rect x="6" y="10" width="44" height="36" rx="2" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="14" y1="20" x2="42" y2="20" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="14" y1="26" x2="36" y2="26" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="14" y1="32" x2="38" y2="32" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="14" y1="38" x2="32" y2="38" stroke="var(--ink)" stroke-width="1.5"/>
+          <circle cx="46" cy="14" r="4" fill="var(--yolk)"/>
+        </svg>
+      </div>
+    </div>
+    <div class="col">
+      <div class="tag" style="color: var(--pond)">Mode 02 / Execution</div>
+      <h3>The <em>Builder.</em></h3>
+      <div class="sub">Engineer who writes exactly what the blueprint says — and stops before changing files.</div>
+      <ul class="bullets">
+        <li>Runs a read-only dry run first, then waits</li>
+        <li>Implements only files listed in the blueprint</li>
+        <li>Logs every change in implementation_log.md</li>
+        <li class="minus">Never invents business logic outside DOMAIN.md</li>
+        <li class="minus">Never skips the dry-run gate</li>
+      </ul>
+      <div class="icon">
+        <svg viewBox="0 0 56 56" width="56" height="56">
+          <path d="M 8 44 L 22 30 L 30 38 L 48 20" fill="none" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="6" y="46" width="44" height="2" fill="var(--ink)"/>
+          <rect x="44" y="14" width="10" height="10" fill="var(--yolk)" stroke="var(--ink)" stroke-width="1.5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Permission levels table -->
+  <div class="perm">
+    <div class="row head">
+      <div>Level</div>
+      <div>Name</div>
+      <div>Operational parameters</div>
+      <div>Risk</div>
+    </div>
+    <div class="row">
+      <div class="lv">0</div>
+      <div class="name">Read-only</div>
+      <div class="desc">Structural analysis and file scanning only. Zero code mutation. The dry-run gate lives here.</div>
+      <div class="risk"><span class="dot" style="background: var(--pond)"></span>Safe</div>
+    </div>
+    <div class="row">
+      <div class="lv">1</div>
+      <div class="name">Sprint scope</div>
+      <div class="desc">Standard starting default. Modify or create only files explicitly cataloged in the active sprint blueprint.</div>
+      <div class="risk"><span class="dot" style="background: var(--pond)"></span>Default</div>
+    </div>
+    <div class="row">
+      <div class="lv">2</div>
+      <div class="name">Approved expansion</div>
+      <div class="desc">Generate minor auxiliary helper modules if surfaced during the dry run and validated by the Architect.</div>
+      <div class="risk"><span class="dot" style="background: var(--yolk)"></span>Watched</div>
+    </div>
+    <div class="row">
+      <div class="lv">3</div>
+      <div class="name">Supervised refactor</div>
+      <div class="desc">Mutate adjacent files outside the core blueprint path, provided every change is indexed in logging modules.</div>
+      <div class="risk"><span class="dot" style="background: var(--beak)"></span>Caution</div>
+    </div>
+    <div class="row">
+      <div class="lv">4</div>
+      <div class="name">Migration</div>
+      <div class="desc">Heavy schema adjustments or complete architecture overhauls. Requires rollback_log.md pre-filled before start.</div>
+      <div class="risk"><span class="dot" style="background: #C75B3D"></span>High</div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION: DO & DON'T ===== -->
+  <div class="section-head">
+    <div class="left">
+      <div class="eyebrow">§08 — Do &amp; Don't</div>
+      <h2>Where the duck <em>should not</em> go.</h2>
+    </div>
+    <div class="right">The mark is generous; the misuses are obvious. Don't put it in a hat, don't squish it, don't outline it, don't make it photographic.</div>
+  </div>
+
+  <div class="misuse">
+    <div class="cell ok">
+      <span class="x">✓</span>
+      <img class="duck" src="assets/duck-logo.png" alt="ADDF" style="width: 120px">
+      <span class="lbl">Solid yolk on paper</span>
+    </div>
+    <div class="cell" style="background: var(--ink)">
+      <span class="x">✕</span>
+      <img class="duck" src="assets/duck-logo-paper.png" alt="ADDF" style="width: 120px">
+      <span class="lbl" style="color: rgba(246,241,228,0.6)">No grey ducks</span>
+    </div>
+    <div class="cell" style="background: linear-gradient(135deg, #ff6ec4, #7873f5);">
+      <span class="x">✕</span>
+      <img class="duck" src="assets/duck-logo.png" alt="ADDF" style="width: 120px">
+      <span class="lbl" style="color: white">No gradient backgrounds</span>
+    </div>
+    <div class="cell">
+      <span class="x">✕</span>
+      <img class="duck" src="assets/duck-logo.png" alt="ADDF" style="width: 80px;  transform: scaleY(0.5)">
+      <span class="lbl">Don't squish</span>
+    </div>
+  </div>
+
+  <!-- ===== CLOSER ===== -->
+  <section class="closer">
+    <div class="quack">Quack<em style="font-style: italic">!</em></div>
+    <div class="meta">
+      <div class="left"><b>End of brand book</b>ADDF · v1.0 · §08 of §08</div>
+      <div class="right">The files are the project →</div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
