@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(git branch -d sprint/001-normalize-existing-repo)",
+      "PowerShell(git push origin --delete sprint/001-normalize-existing-repo)"
+    ]
+  }
+}
