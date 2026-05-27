@@ -5,3 +5,6 @@
 secrets/
 todos/
 .obsidian/
+.DS_Store
+node_modules\
+*.log
