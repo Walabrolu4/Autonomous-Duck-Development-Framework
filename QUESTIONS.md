@@ -10,17 +10,6 @@ Do not delete resolved questions. Resolved questions are part of the project rec
 
 ## Open questions
 
-### Question 001 — License
-
-**Status:** Open  
-**Blocking:** v0.1 public release  
-**Raised:** May 2026
-
-What license will ADDF use?
-
-The project likely needs two licenses — one for code, scripts, and tools, and one for documentation and educational materials. The current options are MIT + CC BY 4.0, Apache 2.0 + CC BY 4.0, or MIT across all content.
-
-The decision must be recorded in `DECISIONS.md` and the `LICENSE` file must exist before the first public commit.
 
 ---
 
@@ -40,18 +29,6 @@ Both may need to be claimed on npm before the name is decided. Verify availabili
 
 ---
 
-### Question 003 — Static website only
-
-**Status:** Open  
-**Blocking:** v0.2 website planning  
-**Raised:** May 2026
-
-Should the first website be static-only?
-
-The recommended decision (Decision 003, see `DECISIONS.md`) says yes — but the web onboarding app eventually needs interactive behavior. Confirm whether the v0.2 website and the v0.4 onboarding app are separate deployments or the same deployment with a static-first phase.
-
----
-
 ### Question 004 — Release folders in starter kit
 
 **Status:** Open  
@@ -61,18 +38,6 @@ The recommended decision (Decision 003, see `DECISIONS.md`) says yes — but the
 Should the first public release include full release folders in the starter kit?
 
 The full ADDF starter kit spec includes `planning/releases/v0.1/` with release plan, scope, release notes, and retrospective. These add structure but also add ceremony for small projects. Decide whether these folders are included in the blank starter kit or only in the example-filled version.
-
----
-
-### Question 005 — DECISIONS.md in minimal ADDF
-
-**Status:** Open  
-**Blocking:** Sprint 002 (Starter Kit)  
-**Raised:** May 2026
-
-Should minimal ADDF include `DECISIONS.md`, or only full ADDF?
-
-The minimum viable ADDF setup listed in the requirements (`AGENTS.md`, `DOMAIN.md`, `STATE.md`, `COMMANDS.md`, `SECURITY.md`, `planning/sprints/sprint_001/`) omits `DECISIONS.md`. However, even small projects benefit from recording their first architectural decisions. Decide which tier `DECISIONS.md` belongs to and document it in the starter kit README.
 
 ---
 
@@ -182,7 +147,42 @@ No model self-approves. No step skips the gate.
 
 ## Resolved questions
 
-*None yet. Questions will be moved here with their resolution as the project progresses.*
+### Question 001 — License
+
+**Status:** Resolved  
+**Blocking:** v0.1 public release  
+**Raised:** May 2026  
+**Resolved:** May 2026
+
+What license will ADDF use?
+
+**Resolution:** CC BY 4.0 for all framework content (documentation, manual, starter kit files, prompts, examples). MIT for code when it is introduced in v0.3+. Operators can use the methodology and license their own work however they choose — no copyleft. Attribution is required only when distributing ADDF files. See Decision 006 and `research/licensing.md`.
+
+---
+
+### Question 003 — Static website only
+
+**Status:** Resolved  
+**Blocking:** v0.2 website planning  
+**Raised:** May 2026  
+**Resolved:** May 2026
+
+Should the first website be static-only? Are v0.2 and v0.4 separate or one deployment?
+
+**Resolution:** v0.2 and v0.4 are one website. The onboarding app is a page within the main site, not a separate deployment. The site is static by default; the onboarding page adds a client-side interactive component. No server is required for either release. See Decision 009 and `research/website-stack.md`.
+
+---
+
+### Question 005 — DECISIONS.md in minimal ADDF
+
+**Status:** Resolved  
+**Blocking:** Sprint 002 (Starter Kit)  
+**Raised:** May 2026  
+**Resolved:** May 2026
+
+Should minimal ADDF include `DECISIONS.md`, or only full ADDF?
+
+**Resolution:** Every project regardless of scale includes both `DECISIONS.md` and `QUESTIONS.md`. No project is too small to record its open questions and durable decisions. Both files are required in the blank starter kit. See Decision 008.
 
 ---
 

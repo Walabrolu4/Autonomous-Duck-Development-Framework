@@ -144,31 +144,35 @@ This adds scope to v0.1. The alternative — deferring handoff to v0.2 — would
 
 ---
 
-## Decision 006: License selection — pending
+## Decision 006: License — CC BY 4.0
 
-**Status:** Pending  
+**Status:** Accepted  
 **Date:** May 2026  
-**Target:** Resolved before v0.1 public release
+**Decided by:** Project owner
 
 ### Context
 
-The project needs a license before public release. Code and documentation may warrant different licenses.
-
-### Options under consideration
-
-| Option | Code | Documentation |
-|---|---|---|
-| A | MIT | Creative Commons Attribution 4.0 |
-| B | Apache 2.0 | Creative Commons Attribution 4.0 |
-| C | MIT only | MIT (apply uniformly) |
-
-### Open question
-
-See `QUESTIONS.md` Question 001.
+The project needs a license before public release. ADDF contains methodology documentation, starter kit files, prompts, examples, and (from v0.3) code. Research (`research/licensing.md`) assessed MIT, Apache 2.0, CC BY 4.0, and MIT-0 across all content types.
 
 ### Decision
 
-Not yet made. Record here when resolved.
+ADDF uses **Creative Commons Attribution 4.0 International (CC BY 4.0)** for all framework content: documentation, manual, starter kit files, prompts, and examples.
+
+When code is introduced (CLI init tool in v0.3, web onboarding app in v0.4), those files are licensed under **MIT**.
+
+### Tradeoffs
+
+CC BY 4.0 requires attribution when distributing or adapting ADDF content — but imposes no copyleft. Operators can use the methodology and build their own projects under any license they choose. Their work does not inherit ADDF's license. Attribution is only required when distributing the ADDF files themselves.
+
+Note: methodology usage (applying ADDF in a project without distributing ADDF files) cannot be legally governed by any license. The broader community norm of crediting the framework is cultural, not contractual.
+
+### Consequences
+
+- `LICENSE` must be created before v0.1 public release. It states CC BY 4.0 for framework content and MIT for code.
+- `README.md` should clarify which license applies to which content type.
+- Starter kit files carry CC BY 4.0. Operators who redistribute them must credit ADDF.
+- Prompt catalog files carry CC BY 4.0. Same attribution requirement applies when shared.
+- Code files (v0.3+) carry MIT. No special requirements beyond preserving the notice.
 
 ---
 
@@ -189,6 +193,62 @@ See `QUESTIONS.md` Question 010.
 ### Decision
 
 Not yet made. Record here when resolved.
+
+---
+
+## Decision 008: QUESTIONS.md and DECISIONS.md are universal — no project is too small
+
+**Status:** Accepted  
+**Date:** May 2026  
+**Decided by:** Project owner
+
+### Context
+
+Q005 asked whether `DECISIONS.md` belongs to minimal ADDF or only full ADDF. The minimum viable ADDF setup in the requirements omits `DECISIONS.md`, implying it is optional for small projects.
+
+### Decision
+
+`QUESTIONS.md` and `DECISIONS.md` are required in every ADDF project regardless of scale. There is no project size below which recording open questions and durable decisions is unnecessary.
+
+The minimal ADDF file list is updated to include both files. The starter kit must include both in the blank template.
+
+### Tradeoffs
+
+This adds two files to the minimum setup. The alternative — treating decisions as optional for small projects — means small projects accumulate undocumented choices and lose the ability to explain why things are the way they are. A one-person project with five decisions written down is better positioned than a ten-person project with none.
+
+### Consequences
+
+- `starter-kit/blank/` must include `DECISIONS.md` and `QUESTIONS.md`.
+- `START_HERE.md` must reference both files in the first-session steps.
+- `DOMAIN.md` minimum viable file list must be updated to include both files.
+- The starter kit README must not describe `DECISIONS.md` or `QUESTIONS.md` as optional.
+
+---
+
+## Decision 009: v0.2 website and v0.4 onboarding app are one deployment
+
+**Status:** Accepted  
+**Date:** May 2026  
+**Decided by:** Project owner
+
+### Context
+
+Q003 asked whether the v0.2 static website and v0.4 onboarding app should be separate deployments or the same site. Research (`research/website-stack.md`) confirmed that the onboarding app requires no server — file generation is client-side only — so there is no technical barrier to hosting both in one deployment.
+
+### Decision
+
+The v0.2 website and v0.4 onboarding app are one website. The onboarding app is a page (or section) within the main site, not a separate product at a separate URL. v0.2 launches without the onboarding page. v0.4 adds it to the same site.
+
+### Tradeoffs
+
+A single deployment means v0.2 framework choice binds v0.4. The mitigation is to choose a framework that supports interactive islands from the start (Astro is the current leading candidate per `research/website-stack.md`) so v0.4 is additive work, not a migration.
+
+### Consequences
+
+- The v0.2 website sprint must choose a framework that can host interactive client-side components without a rewrite.
+- The v0.4 onboarding app is planned as a page within the existing site, not a new repository or new host.
+- A single domain serves both the documentation and the file generator.
+- Q003 is resolved. See also Decision 003 (static website first).
 
 ---
 
