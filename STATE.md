@@ -8,19 +8,22 @@ Autonomous Duck Deployment Framework - Public Repository
 
 Setup the repository as an ADDF-managed project and prepare for v0.1 Public Proof.
 
-
 ## Active Release
 
-V0.1 Public Proof
+v0.1 Public Proof
 
 ## Active Sprint
 
-Sprint 001- Repository skeleton and project brain
+Sprint 002 — Starter Kit
 
-## Current status
+## Last Completed Sprint
 
-Seed file is created. Project brain is not yet generated
+Sprint 001 — Repository skeleton and project brain (closed 2026-05-27)
 
-## Next Step 
+## Current Status
 
-Run design mode to generate full project brain files and Sprint 001 sprint pack.
+Sprint 001 complete and human-reviewed. All project brain files generated, consistency audit run and corrections applied, planning structure created, sprint pack and all closing artifacts complete.
+
+## Next Step
+
+Generate the Sprint 002 sprint pack (requirements.md, blueprint.md, acceptance.md) before beginning any starter kit work. Resolve Q001 (license decision) and assign unscheduled v0.1 items to sprint numbers before Sprint 002 closes.
