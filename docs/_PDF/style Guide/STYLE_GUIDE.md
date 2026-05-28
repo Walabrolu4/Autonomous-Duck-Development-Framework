@@ -72,7 +72,7 @@ The reader is competent. Probably a senior developer or a tech lead. They've use
 
 ### 2.4 What we are not
 
-- We are not "an AI assistant for developers." The Architect and Builder are roles, not products.
+- We are not "an AI assistant for developers." Research Mode, Design Mode, and Develop Mode are session contracts, not products.
 - We are not a SaaS. There's nothing to sign up for.
 - We are not a religion. People can use the parts they want.
 - We are not a joke. The duck is a metaphor that does work.
@@ -546,17 +546,18 @@ Use these exactly. Capitalization matters.
 
 | Term | Lowercase OK? | Notes |
 |---|---|---|
-| **Architect Mode** / **Builder Mode** | No | Always capitalized. |
-| **Sprint Pack** | No | The three files. |
-| **Dry Run** | No | The Builder's read-only report. |
-| **Permission Level** | No | The 0–4 scale. |
+| **Research Mode** | No | Always capitalized. The investigation mode. |
+| **Design Mode** | No | Always capitalized. The specification mode. |
+| **Develop Mode** | No | Always capitalized. The implementation mode. |
+| **Sprint Pack** | No | The three files: `requirements.md`, `blueprint.md`, `acceptance.md`. |
+| **Dry Run** | No | Develop Mode's read-only report produced before any implementation. |
+| **Permission Level** | No | The 0–4 scale controlling Develop Mode freedom. |
 | **The project brain** | Yes | "the project brain" in flowing prose is fine. |
 | **Local File Sovereignty** | No | A proper-noun principle. |
 | **Context Engineering** | No | A proper-noun principle. |
 | **The Reflection Loop** | Yes | Sometimes "the reflection loop" reads better. |
 | **The Pivot Protocol** | No | Capitalize the protocol. |
 | **vibe coding** | Yes (always lowercase) | The anti-pattern. Lowercase as a deliberate jab. |
-| **the Architect** / **the Builder** | After first use | After first capitalized use, lowercase is OK in flowing prose. |
 
 ### 11.2 File naming conventions
 
@@ -574,7 +575,7 @@ Always wrap file names in backticks in prose: `STATE.md`, never STATE.md.
 
 | Word | Why | Use instead |
 |---|---|---|
-| *AI* alone (in a noun phrase) | Hollow | Specify: *the model*, *the Builder*, *the LLM* |
+| *AI* alone (in a noun phrase) | Hollow | Specify: *the model*, *the LLM*, or the mode (*Develop Mode*, *Design Mode*) |
 | *workflow* | Generic | *lifecycle*, *protocol*, *sprint workflow* |
 | *solution*, *platform*, *ecosystem* | Corporate | *framework*, *methodology*, *system* |
 | *users* | Distant | *operators*, *developers*, *the human* (vs the AI) |
@@ -610,8 +611,8 @@ Buttons are verbs in the imperative.
 |---|---|---|
 | Marketing hero | *Your first session →* | *$ git clone addf* |
 | Docs nav | *Read the docs →* | *View the lifecycle* |
-| Sprint completion | *Close the Builder thread* | *Open a retrospective* |
-| Authorization | *Authorize Permission Level 1* | *Send back to Architect* |
+| Sprint completion | *Close the Develop Mode session* | *Open a retrospective* |
+| Authorization | *Authorize Permission Level 1* | *Return to Design Mode* |
 
 - No trailing period on buttons. Arrow `→` for forward actions, right side.
 - Never *Click here*. Never *Submit*. Be specific.
@@ -1014,11 +1015,12 @@ If any box is unchecked, the artifact is not ready.
 
 | Term | Definition |
 |---|---|
-| **Architect** | The planning mode of an LLM. Produces specs, never code. |
-| **Builder** | The execution mode of an LLM. Implements only the approved blueprint. |
+| **Research Mode** | The investigation mode. Gathers evidence, surfaces unknowns, identifies risks. Does not decide or build. |
+| **Design Mode** | The specification mode. Writes Markdown project memory — sprint packs, decisions, docs, retrospectives. Does not write implementation. |
+| **Develop Mode** | The implementation mode. Modifies approved files after Dry Run approval. Does not self-authorize. |
 | **Sprint Pack** | The three files defining a sprint: `requirements.md`, `blueprint.md`, `acceptance.md`. |
-| **Dry Run** | The Builder's read-only report listing every file it intends to change. |
-| **Permission Level** | The 0–4 scale controlling Builder freedom. |
+| **Dry Run** | Develop Mode's read-only report listing every file it intends to create, modify, move, or delete — produced before any implementation begins. |
+| **Permission Level** | The 0–4 scale controlling Develop Mode freedom. |
 | **The project brain** | The local Markdown files holding project memory. |
 | **Mark** | The duck-and-traces logo. |
 | **Lockup** | The mark in combination with the wordmark. |
