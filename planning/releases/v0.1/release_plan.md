@@ -51,9 +51,9 @@ See `planning/releases/v0.1/scope.md` for the complete in-scope and out-of-scope
 
 | Sprint | Title | Status | Sprint pack |
 |---|---|---|---|
-| 001 | Repository skeleton and project brain | `ACTIVE` | `planning/sprints/sprint_001/` |
-| 002 | Starter kit | `PLANNED` | Not yet written |
-| 003 | Prompt catalog | `PLANNED` | Not yet written |
+| 001 | Repository skeleton and project brain | `DONE` | `planning/sprints/sprint_001/` |
+| 002 | Starter kit | `DONE` | `planning/sprints/sprint_002/` |
+| 003 | Prompt catalog | `DONE` | `planning/sprints/sprint_003/` |
 | 007 | Example project — Mini Task Tracker | `PLANNED` | Not yet written |
 | 008 | Handoff and resumption package | `PLANNED` | Not yet written |
 | 009 | Release package | `PLANNED` | Not yet written |
