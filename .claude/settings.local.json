@@ -1,8 +1,21 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(git branch -d sprint/001-normalize-existing-repo)",
-      "PowerShell(git push origin --delete sprint/001-normalize-existing-repo)"
+      "Bash(Get-ChildItem -Recurse \"e:\\\\_Projects\\\\Others\\\\Autonomous Duck Deployment Framework\\\\Autonomous Duck deployment Framework\\\\planning\")",
+      "Bash(Select-Object FullName)",
+      "PowerShell(New-Item -ItemType Directory -Force \"e:\\\\_Projects\\\\Others\\\\Autonomous Duck Deployment Framework\\\\Autonomous Duck deployment Framework\\\\planning\\\\releases\\\\v0.1\")",
+      "PowerShell(Get-ChildItem -Recurse \"e:\\\\_Projects\\\\Others\\\\Autonomous Duck Deployment Framework\\\\Autonomous Duck deployment Framework\" -File | Where-Object { $_.LastWriteTime -gt \\(Get-Date\\).AddHours\\(-12\\) } | Select-Object @{N='Path';E={$_.FullName -replace [regex]::Escape\\(\"e:\\\\_Projects\\\\Others\\\\Autonomous Duck Deployment Framework\\\\Autonomous Duck deployment Framework\\\\\"\\), \"\"}} | Sort-Object Path)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git checkout *)",
+      "Bash(git merge dev --no-ff -m ' *)",
+      "Bash(git branch *)",
+      "Bash(mkdir -p \"e:\\\\_Projects\\\\Others\\\\Autonomous Duck Deployment Framework\\\\Autonomous Duck deployment Framework\\\\planning\\\\sprints\\\\sprint_002\")"
+    ],
+    "additionalDirectories": [
+      "e:\\_Projects\\Others\\Autonomous Duck Deployment Framework\\Autonomous Duck deployment Framework\\planning\\sprints"
     ]
   }
 }

@@ -14,16 +14,16 @@ v0.1 Public Proof
 
 ## Active Sprint
 
-Sprint 002 — Starter Kit
+Sprint 003 - Prompt Catalog
 
 ## Last Completed Sprint
 
-Sprint 001 — Repository skeleton and project brain (closed 2026-05-27)
+Sprint 002 - Starter Kit (closed 2026-05-31)
 
 ## Current Status
 
-Sprint 001 complete and human-reviewed. All project brain files generated, consistency audit run and corrections applied, planning structure created, sprint pack and all closing artifacts complete.
+Sprint 002 is complete, human-approved, and closed. Last completed step: Sprint 002 retrospective and state handoff.
 
 ## Next Step
 
-Generate the Sprint 002 sprint pack (requirements.md, blueprint.md, acceptance.md) before beginning any starter kit work. Resolve Q001 (license decision) and assign unscheduled v0.1 items to sprint numbers before Sprint 002 closes.
+Next intended step: plan and begin Sprint 003 - Prompt Catalog.

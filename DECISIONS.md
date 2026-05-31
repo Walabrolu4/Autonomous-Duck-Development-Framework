@@ -252,4 +252,31 @@ A single deployment means v0.2 framework choice binds v0.4. The mitigation is to
 
 ---
 
+## Decision 010: Release folders excluded from blank starter kit
+
+**Status:** Accepted  
+**Date:** May 2026  
+**Decided by:** Project owner
+
+### Context
+
+Q004 asked whether the blank starter kit should include `planning/releases/v0.1/` structure. The §10.2 canonical structure includes it, but the blank kit targets first-time operators who may not need release folder ceremony immediately.
+
+### Decision
+
+Release folders (`planning/releases/`) are not included in `starter-kit/blank/`. They are included in `starter-kit/example-filled/mini-task-tracker/`. Operators who need release folders can copy the structure from the example-filled kit or add it manually.
+
+### Tradeoffs
+
+The blank kit is simpler and less intimidating. Operators learn release folder structure through the example rather than having empty placeholders they may never use. The cost is that the blank kit diverges from the §10.2 canonical spec; the spec should be updated to reflect this decision.
+
+### Consequences
+
+- `starter-kit/blank/planning/releases/` directory is not created.
+- `starter-kit/example-filled/mini-task-tracker/planning/releases/` is created with full content.
+- The CLI init tool (v0.3) must offer release folders as an opt-in, not default output.
+- `DOMAIN.md` §10.2 reference should be updated to note the blank/example split.
+
+---
+
 *ADDF · `DECISIONS.md` · maintained as part of the project brain*
