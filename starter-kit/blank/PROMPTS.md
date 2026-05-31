@@ -2,6 +2,8 @@
 
 Ready-to-use prompts for every moment in the ADDF workflow. Copy, fill in the bracketed parts, and send. Each prompt tells you which files to load first.
 
+For the full ADDF prompt catalog, see `prompts/README.md` in the public ADDF repository. This starter-kit file contains the minimum prompts needed to start and operate a new project.
+
 ---
 
 ## 1. Session Start — Resume an existing project

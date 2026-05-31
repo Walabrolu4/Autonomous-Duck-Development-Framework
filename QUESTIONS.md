@@ -79,18 +79,6 @@ A Node.js CLI has the advantage of `npx create-addf-project` as the distribution
 
 ---
 
-### Question 010 — Prompt distribution format
-
-**Status:** Open  
-**Blocking:** Sprint 003 (Prompt Catalog)  
-**Raised:** May 2026
-
-Should prompts ship as individual files, one combined file, or both?
-
-The individual file approach (`prompts/design/sprint-pack-generation.md`) allows operators to load exactly the prompt they need. A combined catalog file is easier to share as a download. Decide whether both formats are produced in Sprint 003 or only individual files for v0.1.
-
----
-
 ### Question 011 — The missing named principle: Design → Gate → Develop
 
 **Status:** Open  
@@ -179,6 +167,19 @@ description of implementation_log.md in the starter kit.
 ---
 
 ## Resolved questions
+
+### Question 010 — Prompt distribution format
+
+**Status:** Resolved  
+**Blocking:** Sprint 003 (Prompt Catalog)  
+**Raised:** May 2026  
+**Resolved:** 2026-05-31
+
+Should prompts ship as individual files, one combined file, or both?
+
+**Resolution:** v0.1 ships prompts as individual Markdown files under `prompts/`, with `prompts/README.md` and `docs/prompt-catalog.md` serving as catalog indexes. A downloadable prompt catalog ZIP remains release packaging work for Sprint 009. No combined prompt file is produced in Sprint 003.
+
+---
 
 ### Question 004 — Release folders in starter kit
 
