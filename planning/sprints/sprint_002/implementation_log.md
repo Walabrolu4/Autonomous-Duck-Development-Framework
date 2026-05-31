@@ -96,3 +96,6 @@
 | 82 | `starter-kit/example-filled/mini-task-tracker/planning/sprints/sprint_001/rollback_log.md` | Created | Example-filled rollback log with no-rollbacks note and empty table. |
 | 83 | `planning/sprints/sprint_002/consistency_audit.md` | Created | Consistency audit report with summary checks, PASS/WARNING-style findings resolved as PASS where intentional, every blank kit file listed, example-filled consistency checks, commands run, and no open issues. |
 | 84 | `STATE.md` | Modified | Updated current status and next step to show Sprint 002 starter kit implementation complete and ready for human acceptance review. |
+| 85 | `planning/sprints/sprint_002/human_review.md` | Modified | Accepted all human review sections, marked every section Pass, recorded no issues, checked closure checklist items, and marked Sprint 002 Approved. |
+| 86 | `STATE.md` | Modified | Closed Sprint 002, set active sprint to Sprint 003 - Prompt Catalog, updated last completed sprint and next step. |
+| 87 | `planning/backlog.md` | Modified | Marked Sprint 002 as DONE and added it to the completed sprints table with close date 2026-05-31. |

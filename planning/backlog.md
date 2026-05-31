@@ -36,7 +36,7 @@ Generate all project brain files, apply terminology corrections, and create the 
 
 ### Sprint 002 — Starter kit
 
-**Status:** `[ACTIVE]`  
+**Status:** `[DONE]`  
 **Branch:** `sprint/002-starter-kit`  
 **Sprint pack:** `planning/sprints/sprint_002/`
 
@@ -181,6 +181,7 @@ Key reference: Requirements §14.
 | Sprint | Name | Release | Closed |
 |---|---|---|---|
 | 001 | Repository skeleton and project brain | v0.1 | 2026-05-31 |
+| 002 | Starter kit | v0.1 | 2026-05-31 |
 
 ---
 
