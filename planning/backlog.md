@@ -26,8 +26,8 @@ This file is the single list of all planned, in-progress, and completed sprint w
 
 ### Sprint 001 — Repository skeleton and project brain
 
-**Status:** `[ACTIVE]`  
-**Branch:** `sprint/001-repository-skeleton`  
+**Status:** `[DONE]`  
+**Branch:** `sprint/001-repository-skeleton` (merged)  
 **Sprint pack:** `planning/sprints/sprint_001/`
 
 Generate all project brain files, apply terminology corrections, and create the foundational planning structure. This sprint is Design Mode only.
@@ -36,8 +36,9 @@ Generate all project brain files, apply terminology corrections, and create the 
 
 ### Sprint 002 — Starter kit
 
-**Status:** `[PLANNED]`  
-**Sprint pack:** Not yet written.
+**Status:** `[ACTIVE]`  
+**Branch:** `sprint/002-starter-kit`  
+**Sprint pack:** `planning/sprints/sprint_002/`
 
 Create `starter-kit/blank/` and `starter-kit/example-filled/`. The blank kit contains all project brain templates with placeholders. The example-filled variant uses the Mini Task Tracker project. The kit must be downloadable as a ZIP.
 
@@ -179,9 +180,7 @@ Key reference: Requirements §14.
 
 | Sprint | Name | Release | Closed |
 |---|---|---|---|
-| — | — | — | — |
-
-*(Table will be updated as sprints close.)*
+| 001 | Repository skeleton and project brain | v0.1 | 2026-05-31 |
 
 ---
 

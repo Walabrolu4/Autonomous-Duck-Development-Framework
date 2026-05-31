@@ -29,16 +29,6 @@ Both may need to be claimed on npm before the name is decided. Verify availabili
 
 ---
 
-### Question 004 — Release folders in starter kit
-
-**Status:** Open  
-**Blocking:** Sprint 002 (Starter Kit)  
-**Raised:** May 2026
-
-Should the first public release include full release folders in the starter kit?
-
-The full ADDF starter kit spec includes `planning/releases/v0.1/` with release plan, scope, release notes, and retrospective. These add structure but also add ceremony for small projects. Decide whether these folders are included in the blank starter kit or only in the example-filled version.
-
 ---
 
 ### Question 006 — Onboarding app in v0.1
@@ -145,7 +135,63 @@ No model self-approves. No step skips the gate.
 
 ---
 
+### Question 012 — Unplanned session termination
+
+**Status:** Open  
+**Type:** Decision required  
+**Blocking:** AGENTS.md protocol, handoff protocol  
+**Raised:** May 2026
+
+The handoff protocol requires the active model to generate `handoff_summary.md` before the session ends. This assumes the termination is planned. Context limits are not planned — the session can die mid-task with no opportunity to produce a handoff summary.
+
+In this case the incoming model has only `STATE.md` and `implementation_log.md` to resume from. If `implementation_log.md` is only updated at sprint close, it may not reflect what was half-done when the session ended.
+
+**Options to consider:**
+
+Option 1 — Periodic human-triggered checkpoints
+The human prompts a mini handoff at natural break points within a sprint.
+Relies on human discipline. Does not solve a true mid-sentence termination.
+
+Option 2 — Implementation log as a live running record
+The model updates `implementation_log.md` after every file it touches,
+not just at sprint close. The log becomes a real-time record.
+If the session dies, the incoming model reads the log and knows
+the last completed action.
+
+Option 3 — Standing instruction in AGENTS.md
+Add a rule: "After completing each file or discrete task, update
+`implementation_log.md` before proceeding to the next task."
+No human action required. The model logs as it goes.
+This is the lowest friction option.
+
+Option 4 — Combination
+Option 3 as the default behaviour, plus a human checkpoint prompt
+available in the prompt catalog for use at natural break points.
+
+**Recommended direction:** Option 3 or 4. The implementation log should
+be a live document during Develop Mode, not a closing summary.
+If adopted, this changes the instruction in AGENTS.md and the
+description of implementation_log.md in the starter kit.
+
+**Relevant files:** `AGENTS.md`, `docs/handoff-protocol.md`,
+`prompts/handoff/`, `starter-kit/blank/planning/sprints/_template/`
+
+---
+
 ## Resolved questions
+
+### Question 004 — Release folders in starter kit
+
+**Status:** Resolved  
+**Blocking:** Sprint 002 (Starter Kit)  
+**Raised:** May 2026  
+**Resolved:** May 2026
+
+Should the first public release include full release folders in the starter kit?
+
+**Resolution:** Release folders (`planning/releases/`) are included in the example-filled kit only, not the blank kit. The blank kit minimizes ceremony. Release folder structure is demonstrated through the Mini Task Tracker example. See Decision 010.
+
+---
 
 ### Question 001 — License
 
