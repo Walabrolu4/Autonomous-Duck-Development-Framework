@@ -114,9 +114,9 @@ These items are in scope for v0.1 but are not yet assigned to a sprint number. A
 
 ### Sprint 004 — Website information architecture
 
-**Status:** `[ACTIVE]`  
-**Branch:** `sprint/004-website-information-architecture`  
-**Sprint pack:** Not yet written.
+**Status:** `[DONE]`  
+**Branch:** `sprint/004-website-information-architecture` (merged)  
+**Sprint pack:** `planning/sprints/sprint_004/`
 
 Design the website structure and page content plan. No website implementation. Outputs: `website/README.md`, `docs/site-map.md`, `docs/page-blueprints.md`.
 
@@ -186,6 +186,7 @@ Key reference: Requirements §14.
 | 001 | Repository skeleton and project brain | v0.1 | 2026-05-31 |
 | 002 | Starter kit | v0.1 | 2026-05-31 |
 | 003 | Prompt catalog | v0.1 | 2026-05-31 |
+| 004 | Website information architecture | v0.2 | 2026-06-01 |
 
 ---
 
