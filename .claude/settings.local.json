@@ -12,10 +12,13 @@
       "Bash(git checkout *)",
       "Bash(git merge dev --no-ff -m ' *)",
       "Bash(git branch *)",
-      "Bash(mkdir -p \"e:\\\\_Projects\\\\Others\\\\Autonomous Duck Deployment Framework\\\\Autonomous Duck deployment Framework\\\\planning\\\\sprints\\\\sprint_002\")"
+      "Bash(mkdir -p \"e:\\\\_Projects\\\\Others\\\\Autonomous Duck Deployment Framework\\\\Autonomous Duck deployment Framework\\\\planning\\\\sprints\\\\sprint_002\")",
+      "Bash(Remove-Item \"E:/_Projects/Others/Autonomous Duck Deployment Framework/Autonomous Duck deployment Framework/.git/index.lock\" -Force)",
+      "Bash(rm \"E:/_Projects/Others/Autonomous Duck Deployment Framework/Autonomous Duck deployment Framework/.git/index.lock\")"
     ],
     "additionalDirectories": [
-      "e:\\_Projects\\Others\\Autonomous Duck Deployment Framework\\Autonomous Duck deployment Framework\\planning\\sprints"
+      "e:\\_Projects\\Others\\Autonomous Duck Deployment Framework\\Autonomous Duck deployment Framework\\planning\\sprints",
+      "E:\\_Projects\\Others\\Autonomous Duck Deployment Framework\\Autonomous Duck deployment Framework\\.git"
     ]
   }
 }

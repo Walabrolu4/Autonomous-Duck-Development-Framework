@@ -1,4 +1,4 @@
-# Sprint 004 — Acceptance Criteria
+////////////////////////////////////# Sprint 004 — Acceptance Criteria
 
 **Sprint:** Sprint 004 - Website Information Architecture
 
