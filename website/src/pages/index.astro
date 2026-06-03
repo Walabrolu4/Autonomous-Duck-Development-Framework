@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+	<section class="hero dotted-grid">
+		<div class="container hero-container">
+			<div class="eyebrow mono">Autonomous Duck Deployment Framework</div>
+			<h1 class="serif">The files are the project.</h1>
+			<p class="lede">File-first methodology for LLM-assisted software development.</p>
+			
+			<div class="cta-group">
+				<a href="/start-here" class="btn btn-primary">Start Here →</a>
+				<a href="https://github.com/Walabrolu4/Autonomous-Duck-Development-Framework" class="btn btn-secondary" target="_blank">View on GitHub</a>
+			</div>
+			
+			<div class="terminal-block">
+				<span style="color: rgba(246,241,228,0.45)">// Design Mode plans. Develop Mode builds.</span><br/>
+				$ cp -r starter-kit/blank/* .<br/>
+				Initializing project brain...<br/>
+				Your move <span class="cursor"></span>
+			</div>
+		</div>
+	</section>
+
+	<section class="features">
+		<div class="container">
+			<div class="section-head">
+				<div>
+					<div class="eyebrow mono">Core Principles</div>
+					<h2 class="serif">What we believe</h2>
+				</div>
+				<p class="section-desc">Three principles. Memorize them. They drive every design and copy decision in the framework.</p>
+			</div>
+
+			<div class="feature-grid">
+				<div class="card card-warm">
+					<div class="eyebrow mono">Principle 01</div>
+					<h3>The files are the project.</h3>
+					<p>Markdown on disk is the source of truth. AI sessions are interchangeable compute. Stop vibe coding.</p>
+				</div>
+				<div class="card">
+					<div class="eyebrow mono">Principle 02</div>
+					<h3>A duck can't invent your business logic.</h3>
+					<p>Specifications come from the human; execution comes from the model. You are the operator.</p>
+				</div>
+				<div class="card">
+					<div class="eyebrow mono">Principle 03</div>
+					<h3>Cleaner context beats more context.</h3>
+					<p>Each session reads only the files it needs. We engineer context to reduce hallucinations and maximize quality.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="lifecycle">
+		<div class="container">
+			<div class="section-head dark">
+				<div>
+					<div class="eyebrow mono">Methodology</div>
+					<h2 class="serif">The 8-step lifecycle</h2>
+				</div>
+			</div>
+			
+			<div class="card lifecycle-card">
+				<div class="lifecycle-steps">
+					<ol>
+						<li>Research</li>
+						<li>Design & feasibility</li>
+						<li>Validation</li>
+						<li>Architecture</li>
+						<li>Sprint planning</li>
+						<li>Build & test</li>
+						<li>Review & reflection</li>
+						<li>Deploy, maintain, or resume</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.hero {
+		padding: var(--space-12) 0;
+		border-bottom: 1px solid var(--rule);
+	}
+
+	.hero-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.hero .eyebrow {
+		margin-bottom: var(--space-4);
+	}
+
+	.hero h1 {
+		margin-bottom: var(--space-4);
+	}
+
+	.lede {
+		font-size: 20px;
+		color: var(--ink-soft);
+		max-width: 620px;
+		margin-bottom: var(--space-6);
+	}
+
+	.cta-group {
+		display: flex;
+		gap: var(--space-4);
+		margin-bottom: var(--space-10);
+	}
+
+	.terminal-block {
+		width: 100%;
+		max-width: 720px;
+		text-align: left;
+	}
+
+	.features {
+		padding: var(--space-10) 0;
+	}
+
+	.section-head {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		border-bottom: 1px solid var(--rule);
+		padding-bottom: var(--space-5);
+		margin-bottom: var(--space-6);
+	}
+
+	.section-head .eyebrow {
+		margin-bottom: var(--space-2);
+	}
+
+	.section-desc {
+		color: var(--ink-soft);
+		max-width: 320px;
+	}
+
+	.feature-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--space-6);
+	}
+
+	.feature-grid .card .eyebrow {
+		margin-bottom: var(--space-4);
+		color: var(--ink-soft);
+	}
+
+	.feature-grid .card h3 {
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: var(--space-3);
+	}
+
+	.lifecycle {
+		padding: var(--space-10) 0;
+	}
+
+	.lifecycle-card {
+		padding: var(--space-8);
+		background-color: var(--ink);
+		color: var(--paper);
+		border-color: var(--ink);
+	}
+
+	.lifecycle-steps ol {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--space-4);
+		padding-left: var(--space-5);
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 20px;
+	}
+
+	.lifecycle-steps li {
+		padding-left: var(--space-2);
+	}
+	
+	@media (max-width: 959px) {
+		.feature-grid {
+			grid-template-columns: 1fr;
+		}
+		.section-head {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: var(--space-4);
+		}
+		.lifecycle-steps ol {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

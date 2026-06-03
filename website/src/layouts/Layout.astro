@@ -1,0 +1,120 @@
+---
+import '../styles/global.css';
+
+const { title, description = 'File-first methodology for LLM-assisted software development.' } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/logo.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title ? `${title} | ADDF` : 'Autonomous Duck Deployment Framework'}</title>
+		<meta name="description" content={description} />
+	</head>
+	<body>
+		<header class="global-header">
+			<div class="container header-container">
+				<a href="/" class="brand">
+					<img src="/logo.png" alt="ADDF Duck" class="logo" />
+					<span class="wordmark serif">ADDF</span>
+				</a>
+				<nav>
+					<!-- Docs coming in Sprint 006 -->
+					<a href="/downloads">Prompts</a>
+					<a href="/downloads">Templates</a>
+				</nav>
+				<a href="/start-here" class="btn btn-primary">Read the docs →</a>
+			</div>
+		</header>
+		
+		<main>
+			<slot />
+		</main>
+
+		<footer class="global-footer">
+			<div class="container footer-container">
+				<div class="quack serif">Quack!</div>
+				<div class="meta mono">
+					<span>READ: STATE.MD</span>
+					<span>VERSION 0.2</span>
+					<a href="https://github.com/Walabrolu4/Autonomous-Duck-Development-Framework" target="_blank">GITHUB</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style>
+	.global-header {
+		position: sticky;
+		top: 0;
+		background-color: rgba(246, 241, 228, 0.95);
+		border-bottom: 1px solid var(--mist);
+		z-index: 100;
+		backdrop-filter: blur(8px);
+	}
+
+	.header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: var(--space-4);
+		padding-bottom: var(--space-4);
+	}
+
+	.brand {
+		display: flex;
+		align-items: baseline;
+		gap: var(--space-3);
+		text-decoration: none;
+		color: var(--ink);
+	}
+
+	.logo {
+		height: 32px;
+		width: auto;
+		transform: translateY(6px);
+	}
+
+	.wordmark {
+		font-size: 28px;
+	}
+
+	nav {
+		display: flex;
+		gap: var(--space-5);
+	}
+
+	nav a {
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 13.5px;
+		color: var(--ink-soft);
+	}
+
+	nav a:hover {
+		color: var(--ink);
+	}
+
+	.global-footer {
+		background-color: var(--yolk);
+		padding: var(--space-12) 0 var(--space-6);
+		margin-top: var(--space-16);
+	}
+
+	.quack {
+		font-size: clamp(120px, 15vw, 200px);
+		font-style: italic;
+		line-height: 0.9;
+		margin-bottom: var(--space-12);
+		text-align: right;
+	}
+
+	.meta {
+		display: flex;
+		justify-content: space-between;
+		border-top: 1px solid var(--ink);
+		padding-top: var(--space-4);
+	}
+</style>

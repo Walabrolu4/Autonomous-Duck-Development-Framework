@@ -279,4 +279,30 @@ The blank kit is simpler and less intimidating. Operators learn release folder s
 
 ---
 
+## Decision 011: PNG logo as interim visual asset for v0.1
+
+**Status:** Accepted  
+**Date:** 2026-06-02  
+**Decided by:** Project owner
+
+### Context
+
+Q007 asked whether the vector duck logo (`duck-logo.svg`) will be ready by v0.1 or if PNG assets will serve as interim. The website MVP (Sprint 005) needs logo assets for branding.
+
+### Decision
+
+A PNG logo will serve as an interim visual asset for v0.1. The vector logo is deferred until it is ready.
+
+### Tradeoffs
+
+Using a PNG might cause pixelation on high-DPI displays compared to an SVG, but it unblocks the website MVP and v0.1 release packaging without waiting on vector asset design. 
+
+### Consequences
+
+- Sprint 005 (Website MVP) will use the PNG logo.
+- The `assets/logo/` folder will contain the PNG logo for v0.1.
+- Q007 is resolved.
+
+---
+
 *ADDF · `DECISIONS.md` · maintained as part of the project brain*

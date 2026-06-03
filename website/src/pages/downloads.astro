@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Downloads">
+	<div class="container downloads-container">
+		<h1 class="serif">Downloads</h1>
+		<p class="lede">Central hub for all downloadable framework assets.</p>
+
+		<div class="download-grid">
+			<div class="card card-warm">
+				<div class="eyebrow mono">v0.1</div>
+				<h3 class="serif">Blank Starter Kit</h3>
+				<p>The minimal directory structure and empty project brain templates to start a new ADDF project.</p>
+				<a href="/assets/starter-kit-blank-v0.1.zip" class="btn btn-primary" style="margin-top: var(--space-4);">Download ZIP →</a>
+			</div>
+
+			<div class="card">
+				<div class="eyebrow mono">v0.1</div>
+				<h3 class="serif">Example-Filled Starter Kit</h3>
+				<p>The structure pre-populated with the Mini Task Tracker example to demonstrate the framework at scale.</p>
+				<a href="/assets/starter-kit-example-v0.1.zip" class="btn btn-secondary" style="margin-top: var(--space-4);">Download ZIP</a>
+			</div>
+
+			<div class="card">
+				<div class="eyebrow mono">v0.1</div>
+				<h3 class="serif">Prompt Catalog</h3>
+				<p>The complete collection of copy-ready prompts grouped by mode: Research, Design, Develop, and Handoff.</p>
+				<a href="/assets/prompt-catalog-v0.1.zip" class="btn btn-secondary" style="margin-top: var(--space-4);">Download ZIP</a>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.downloads-container {
+		padding: var(--space-10) var(--space-5);
+	}
+
+	.lede {
+		font-size: 20px;
+		color: var(--ink-soft);
+		margin-bottom: var(--space-8);
+	}
+
+	.download-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: var(--space-6);
+	}
+
+	.download-grid .card h3 {
+		font-size: 32px;
+		margin-top: var(--space-2);
+		margin-bottom: var(--space-3);
+	}
+
+	.download-grid .card p {
+		color: var(--ink-soft);
+	}
+
+	@media (max-width: 959px) {
+		.download-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

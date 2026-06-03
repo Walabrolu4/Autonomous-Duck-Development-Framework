@@ -43,18 +43,6 @@ The current roadmap places the onboarding app at v0.4. Confirm this is correct a
 
 ---
 
-### Question 007 — Visual assets for v0.1
-
-**Status:** Open  
-**Blocking:** v0.1 release package  
-**Raised:** May 2026
-
-What visual assets are required for v0.1?
-
-The requirements list: `assets/logo/`, `assets/lifecycle/`, and `assets/diagrams/` with the 15 core framework diagrams. Confirm which diagram formats are required (SVG, PNG, or both), whether all 15 diagrams are in scope for v0.1, and whether the vector duck logo (`duck-logo.svg`) will be ready by v0.1 or if PNG assets will serve as interim.
-
----
-
 ### Question 008 — Planning history visibility
 
 **Status:** Open  
@@ -167,6 +155,19 @@ description of implementation_log.md in the starter kit.
 ---
 
 ## Resolved questions
+
+### Question 007 — Visual assets for v0.1
+
+**Status:** Resolved  
+**Blocking:** v0.1 release package  
+**Raised:** May 2026  
+**Resolved:** 2026-06-02
+
+What visual assets are required for v0.1?
+
+**Resolution:** A PNG logo will serve as an interim asset for v0.1. The vector logo is deferred until it is ready. See Decision 011.
+
+---
 
 ### Question 010 — Prompt distribution format
 

@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Start Here">
+	<div class="container docs-container">
+		<div class="doc-content">
+			<h1 class="serif">Start Here</h1>
+			<p class="lede">Provide the onboarding flow for an operator's first session.</p>
+			
+			<div class="section-head">
+				<h2 class="serif">1. Prepare your environment</h2>
+			</div>
+			<p>You need three things to run the Autonomous Duck Deployment Framework:</p>
+			<ul>
+				<li>A capable LLM (Claude, ChatGPT, etc.)</li>
+				<li>A terminal</li>
+				<li>A markdown editor</li>
+			</ul>
+
+			<div class="section-head">
+				<h2 class="serif">2. Download the Starter Kit</h2>
+			</div>
+			<p>Download the blank starter kit from the <a href="/downloads" style="text-decoration: underline;">Downloads page</a>. Extract it into your project directory. This provides the canonical file structure.</p>
+
+			<div class="section-head">
+				<h2 class="serif">3. Initialize the Project Brain</h2>
+			</div>
+			<p>Open <code>STATE.md</code>, <code>DOMAIN.md</code>, and <code>DECISIONS.md</code>. Fill in the placeholder details for your project. The files are the project — these definitions will guide every AI session moving forward.</p>
+
+			<div class="section-head">
+				<h2 class="serif">4. Run your first session</h2>
+			</div>
+			<p>Copy the first-session prompt from the prompt catalog, load the required files, and declare the mode. You are now operating within ADDF.</p>
+			
+			<div class="cta-area">
+				<a href="/downloads" class="btn btn-primary">Go to Downloads →</a>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.docs-container {
+		padding: var(--space-10) var(--space-5);
+		max-width: 720px;
+		margin: 0 auto;
+	}
+
+	.lede {
+		font-size: 20px;
+		color: var(--ink-soft);
+		margin-bottom: var(--space-8);
+	}
+
+	.section-head {
+		border-bottom: 1px solid var(--rule);
+		padding-bottom: var(--space-3);
+		margin-bottom: var(--space-4);
+		margin-top: var(--space-8);
+	}
+
+	p {
+		margin-bottom: var(--space-4);
+	}
+
+	ul {
+		padding-left: var(--space-5);
+		margin-bottom: var(--space-4);
+	}
+
+	li {
+		margin-bottom: var(--space-2);
+	}
+
+	code {
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 0.92em;
+		background-color: rgba(20,17,13,0.06);
+		padding: 2px 4px;
+		border-radius: var(--radius-sm);
+	}
+
+	.cta-area {
+		margin-top: var(--space-8);
+	}
+</style>

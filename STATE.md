@@ -18,12 +18,12 @@ None
 
 ## Last Completed Sprint
 
-Sprint 004 - Website information architecture (closed 2026-06-01)
+Sprint 005 - Website MVP (closed 2026-06-03)
 
 ## Current Status
 
-Sprint 004 is complete, human-approved, and closed. The website README, site map, and page blueprints have been generated. The information architecture is finalized for v0.2.
+Sprint 005 is complete, human-approved, and closed. The website MVP is fully functional and ready for deployment or extension in future sprints.
 
 ## Next Step
 
-Next intended step: Plan and initiate Sprint 005 (Website MVP) or another scheduled sprint from the backlog.
+Plan and initiate the next sprint from the backlog.
