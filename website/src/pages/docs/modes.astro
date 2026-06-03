@@ -1,0 +1,44 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+  title="Modes" 
+  currentPath="/docs/modes"
+  prev={{ path: '/docs/lifecycle', label: 'Lifecycle' }}
+  next={{ path: '/docs/project-brain', label: 'Project Brain' }}
+>
+  <h1>Operating Modes</h1>
+  <p>Every AI session runs in one explicit mode — the mode answers what the model is allowed to do. Declare the mode at the top of every AI session, before any other instruction.</p>
+  
+  <img src="/images/2_Three Operating Modes.png" alt="Three Operating Modes" />
+  
+  <h2>The three modes</h2>
+  
+  <h3>1. Research Mode</h3>
+  <p><strong>Purpose:</strong> Investigate and synthesize information.</p>
+  <p>It gathers evidence, compares options, summarizes sources, and names risks. It does not decide or build.</p>
+
+  <h3>2. Design Mode</h3>
+  <p><strong>Purpose:</strong> Write the project memory.</p>
+  <p>It converts research, intent, and feedback into durable Markdown artifacts — domain files, sprint packs, retrospectives, and handoff notes. It does not write source code.</p>
+
+  <h3>3. Develop Mode</h3>
+  <p><strong>Purpose:</strong> Change the actual project.</p>
+  <p>It is the only mode allowed to write code or modify implementation assets. It must produce a Dry Run and wait for authorization before touching any file.</p>
+  
+  <blockquote><strong>Rule:</strong> Declare the mode before the model acts. Mode controls write permission.</blockquote>
+
+  <h2>Develop Mode Permission Levels</h2>
+  <p>Permission levels apply only to Develop Mode. They control how far the model may reach beyond the approved Sprint Pack scope.</p>
+  <ul>
+    <li><strong>Level 0:</strong> Dry Run Only. Read-only analysis.</li>
+    <li><strong>Level 1:</strong> Approved Sprint Scope. Modify only files approved in blueprint.</li>
+    <li><strong>Level 2:</strong> Approved Expansion. Add minor helper files.</li>
+    <li><strong>Level 3:</strong> Supervised Refactor. Modify adjacent files with explicit approval.</li>
+    <li><strong>Level 4:</strong> Migration / High-Risk Change. Requires a rollback plan.</li>
+  </ul>
+  <blockquote><strong>Rule:</strong> Develop Mode does not self-authorize. Escalation requires explicit human instruction.</blockquote>
+
+  <img src="/images/8_Dry Run Approval Gate.png" alt="Dry Run Approval Gate" />
+</DocsLayout>

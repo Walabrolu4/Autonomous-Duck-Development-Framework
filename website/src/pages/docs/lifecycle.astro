@@ -1,0 +1,32 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+  title="Lifecycle" 
+  currentPath="/docs/lifecycle"
+  prev={{ path: '/docs/scale-model', label: 'Scale Model' }}
+  next={{ path: '/docs/modes', label: 'Modes' }}
+>
+  <h1>The Sprint Loop</h1>
+  <p>The Sprint Loop is the controlled 11-step implementation workflow — from pre-flight gate through commit, state update, and session reset.</p>
+  
+  <img src="/images/7_Sprint Loop.png" alt="Sprint Loop" />
+  
+  <h2>The 11 Steps</h2>
+  <ol>
+    <li><strong>Pre-flight gate:</strong> The human checks readiness before any session opens.</li>
+    <li><strong>Design sprint pack:</strong> Design Mode generates the Sprint Pack (requirements, blueprint, acceptance).</li>
+    <li><strong>Human blueprint review:</strong> The human validates the Sprint Pack before implementation begins.</li>
+    <li><strong>Develop dry run:</strong> Develop Mode opens at Level 0 and lists intended changes in <code>dry_run.md</code>.</li>
+    <li><strong>Design review of dry run:</strong> Design Mode checks the dry run against the Sprint Pack.</li>
+    <li><strong>Dependency approval gate:</strong> New dependencies require a <code>DECISIONS.md</code> entry.</li>
+    <li><strong>Authorize development:</strong> The human sends the exact authorization message to Develop Mode.</li>
+    <li><strong>Build & test:</strong> Develop Mode implements and logs output to <code>implementation_log.md</code>.</li>
+    <li><strong>Design review of output:</strong> Design Mode reviews the outcome against the acceptance criteria.</li>
+    <li><strong>Human approval gate:</strong> The human performs final verification.</li>
+    <li><strong>Commit, update, reset:</strong> The human commits, updates <code>STATE.md</code>, and marks retrospective complete.</li>
+  </ol>
+  
+  <blockquote><strong>Rule:</strong> A sprint ends when state is updated, not when code compiles.</blockquote>
+</DocsLayout>

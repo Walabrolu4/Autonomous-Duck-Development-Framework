@@ -18,11 +18,11 @@ None
 
 ## Last Completed Sprint
 
-Sprint 005 - Website MVP (closed 2026-06-03)
+Sprint 006 - Documentation Pages (closed 2026-06-03)
 
 ## Current Status
 
-Sprint 005 is complete, human-approved, and closed. The website MVP is fully functional and ready for deployment or extension in future sprints.
+Sprint 006 is complete, human-approved, and closed. The website docs are built and visually integrated.
 
 ## Next Step
 

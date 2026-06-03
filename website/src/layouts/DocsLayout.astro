@@ -1,0 +1,234 @@
+---
+import Layout from './Layout.astro';
+const { title, currentPath, prev, next } = Astro.props;
+
+const docLinks = [
+  { path: '/docs/framework', label: 'Framework' },
+  { path: '/docs/scale-model', label: 'Scale Model' },
+  { path: '/docs/lifecycle', label: 'Lifecycle' },
+  { path: '/docs/modes', label: 'Modes' },
+  { path: '/docs/project-brain', label: 'Project Brain' },
+  { path: '/docs/starter-kit', label: 'Starter Kit' },
+  { path: '/docs/prompt-catalog', label: 'Prompt Catalog' },
+  { path: '/docs/examples', label: 'Examples' }
+];
+---
+
+<Layout title={title}>
+	<div class="container docs-layout">
+		<aside class="docs-sidebar">
+			<nav>
+				{docLinks.map(link => (
+					<a 
+						href={link.path} 
+						class={currentPath === link.path ? 'active' : ''}
+					>
+						{link.label}
+					</a>
+				))}
+			</nav>
+		</aside>
+		
+		<article class="docs-content">
+			<slot />
+			
+			<div class="docs-pagination">
+				{prev ? (
+					<a href={prev.path} class="btn-pagination prev">
+						<span class="label">Previous</span>
+						<span class="title">← {prev.label}</span>
+					</a>
+				) : <div></div>}
+				
+				{next ? (
+					<a href={next.path} class="btn-pagination next">
+						<span class="label">Next</span>
+						<span class="title">{next.label} →</span>
+					</a>
+				) : <div></div>}
+			</div>
+		</article>
+	</div>
+</Layout>
+
+<style>
+	.docs-layout {
+		display: grid;
+		grid-template-columns: 240px 1fr;
+		gap: var(--space-12);
+		padding-top: var(--space-8);
+		padding-bottom: var(--space-12);
+	}
+
+	.docs-sidebar {
+		position: sticky;
+		top: calc(var(--space-12) + 80px);
+		height: max-content;
+	}
+
+	.docs-sidebar nav {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-3);
+	}
+
+	.docs-sidebar a {
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 14px;
+		color: var(--ink-soft);
+		text-decoration: none;
+		padding-left: var(--space-2);
+		border-left: 1px solid var(--mist);
+		transition: all 0.2s ease;
+	}
+
+	.docs-sidebar a:hover {
+		color: var(--ink);
+		border-left-color: var(--yolk);
+	}
+
+	.docs-sidebar a.active {
+		color: var(--ink);
+		border-left: 2px solid var(--yolk);
+		font-weight: bold;
+	}
+
+	.docs-content {
+		max-width: 720px;
+	}
+
+	/* Markdown styles applied to the slot */
+	.docs-content :global(h1) {
+		margin-bottom: var(--space-6);
+	}
+
+	.docs-content :global(h2) {
+		margin-top: var(--space-10);
+		margin-bottom: var(--space-4);
+		font-size: 28px;
+	}
+
+	.docs-content :global(h3) {
+		margin-top: var(--space-8);
+		margin-bottom: var(--space-3);
+		font-size: 20px;
+	}
+
+	.docs-content :global(p), .docs-content :global(ul), .docs-content :global(ol) {
+		margin-bottom: var(--space-4);
+	}
+
+	.docs-content :global(li) {
+		margin-bottom: var(--space-2);
+	}
+
+	.docs-content :global(img) {
+		max-width: 100%;
+		border: 1px solid var(--mist);
+		border-radius: var(--radius);
+		margin: var(--space-6) 0;
+	}
+
+	.docs-content :global(pre) {
+		background-color: var(--ink) !important;
+		color: var(--paper) !important;
+		padding: var(--space-4);
+		border-radius: var(--radius);
+		overflow-x: auto;
+		margin-bottom: var(--space-4);
+	}
+
+	.docs-content :global(code) {
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 13px;
+	}
+
+	.docs-content :global(p > code), .docs-content :global(li > code) {
+		background-color: var(--mist);
+		padding: 2px 4px;
+		border-radius: 2px;
+		color: var(--ink);
+	}
+	
+	.docs-content :global(blockquote) {
+		border-left: 2px solid var(--yolk);
+		padding-left: var(--space-4);
+		margin-left: 0;
+		font-style: italic;
+		color: var(--ink-soft);
+	}
+
+	.docs-content :global(table) {
+		width: 100%;
+		border-collapse: collapse;
+		margin: var(--space-6) 0;
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 13px;
+	}
+
+	.docs-content :global(th), .docs-content :global(td) {
+		border: 1px solid var(--mist);
+		padding: var(--space-3);
+		text-align: left;
+	}
+
+	.docs-content :global(th) {
+		background-color: var(--mist);
+	}
+
+	.docs-pagination {
+		display: flex;
+		justify-content: space-between;
+		margin-top: var(--space-12);
+		padding-top: var(--space-8);
+		border-top: 1px solid var(--mist);
+	}
+
+	.btn-pagination {
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		color: var(--ink);
+		padding: var(--space-4);
+		border: 1px solid var(--mist);
+		border-radius: var(--radius);
+		transition: all 0.2s ease;
+		min-width: 200px;
+	}
+
+	.btn-pagination:hover {
+		border-color: var(--yolk);
+		background-color: rgba(243, 167, 18, 0.05);
+	}
+
+	.btn-pagination.next {
+		text-align: right;
+		align-items: flex-end;
+	}
+
+	.btn-pagination .label {
+		font-family: 'JetBrains Mono', monospace;
+		font-size: 12px;
+		color: var(--ink-soft);
+		margin-bottom: var(--space-2);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.btn-pagination .title {
+		font-family: 'Instrument Serif', serif;
+		font-size: 22px;
+	}
+
+	@media (max-width: 768px) {
+		.docs-layout {
+			grid-template-columns: 1fr;
+		}
+		.docs-sidebar {
+			position: static;
+			margin-bottom: var(--space-8);
+			padding-bottom: var(--space-6);
+			border-bottom: 1px solid var(--mist);
+		}
+	}
+</style>

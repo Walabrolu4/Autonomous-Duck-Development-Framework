@@ -1,0 +1,54 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+  title="Project Brain" 
+  currentPath="/docs/project-brain"
+  prev={{ path: '/docs/modes', label: 'Modes' }}
+  next={{ path: '/docs/starter-kit', label: 'Starter Kit' }}
+>
+  <h1>The Project Brain</h1>
+  <p>The Project Brain is the file-backed memory layer — it must be current, explicit, scoped, reviewable, searchable, versioned, and safe to load into an LLM session.</p>
+  
+  <img src="/images/6_Project Brain file map.png" alt="Project Brain file map" />
+
+  <h2>Core files</h2>
+  <p>The core files are loaded into every AI session that requires project context. They define the operating rules, domain, current state, and key decisions.</p>
+  <ul>
+    <li><code>AGENTS.md</code>: Mode rules, permissions, session constraints. (Always loaded first)</li>
+    <li><code>DOMAIN.md</code>: Business logic, entities, workflows, boundaries.</li>
+    <li><code>STATE.md</code>: Current goal, scale, mode, release, sprint, blockers, next action.</li>
+    <li><code>DECISIONS.md</code>: Durable architecture and dependency decisions.</li>
+    <li><code>COMMANDS.md</code>: Run, test, build, deploy, and rollback commands.</li>
+    <li><code>SECURITY.md</code>: Safe-to-load and never-load rules.</li>
+    <li><code>QUESTIONS.md</code>: Unknowns and blockers.</li>
+    <li><code>RISKS.md</code>: Known risks and mitigation.</li>
+    <li><code>GIT_STRATEGY.md</code>: Branching and merging rules.</li>
+  </ul>
+
+  <h2>Sprint files</h2>
+  <p>Sprint files are scoped to a single sprint folder. They document what was planned, what was built, and what was learned.</p>
+  <ul>
+    <li><code>requirements.md</code>: What the sprint must accomplish.</li>
+    <li><code>blueprint.md</code>: How the sprint will be implemented.</li>
+    <li><code>acceptance.md</code>: What counts as done.</li>
+    <li><code>dry_run.md</code>: What Develop Mode intends to change.</li>
+    <li><code>implementation_log.md</code>: What Develop Mode changed and verified.</li>
+    <li><code>human_review.md</code>: Human approval record.</li>
+    <li><code>retrospective.md</code>: Lessons and constraints from the sprint.</li>
+  </ul>
+
+  <h2>Properties of good project memory</h2>
+  <ol>
+    <li><strong>Current:</strong> Stale memory is worse than no memory.</li>
+    <li><strong>Explicit:</strong> Rules, scope, entities, and constraints are written down.</li>
+    <li><strong>Scoped:</strong> Each file covers one concern.</li>
+    <li><strong>Reviewable:</strong> Every file can be diffed, committed, and audited.</li>
+    <li><strong>Searchable:</strong> Headings and structure are consistent.</li>
+    <li><strong>Versioned:</strong> Files live in the repository and are tracked in git.</li>
+    <li><strong>Safe to load:</strong> <code>SECURITY.md</code> defines the safe-to-load boundary.</li>
+  </ol>
+  
+  <blockquote><strong>Rule:</strong> If a model needs to know it later, write it to the project brain.</blockquote>
+</DocsLayout>

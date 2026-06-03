@@ -1,0 +1,48 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+  title="Framework" 
+  currentPath="/docs/framework"
+  next={{ path: '/docs/scale-model', label: 'Scale Model' }}
+>
+  <h1>Core Concepts</h1>
+  <p>ADDF works by separating four decisions that unstructured AI-assisted workflows collapse into one — scale, lifecycle stage, operating mode, and project memory.</p>
+  
+  <h2>The four separations</h2>
+  <pre><code>1. Work scale      — How large is the change?
+2. Lifecycle stage — Where is the work in the delivery process?
+3. Operating mode  — What is the model allowed to do?
+4. Project memory  — Which files define the current truth?</code></pre>
+  <p>These four questions are related but distinct. Collapsing them produces the failure modes that ADDF is designed to prevent.</p>
+  <blockquote><strong>Rule:</strong> Choose the scale before choosing the process.</blockquote>
+
+  <img src="/images/1_ADDF framework map.png" alt="Framework Map" />
+  
+  <h2>The six core principles</h2>
+  
+  <h3>1. Local File Sovereignty</h3>
+  <p>The authoritative project state lives in local files. LLM sessions can read, summarize, modify, or produce those files according to mode constraints — but the model is not the system of record. The repository is.</p>
+  <blockquote><strong>Rule:</strong> The files are the project.</blockquote>
+
+  <h3>2. Explicit work scale</h3>
+  <p>Every unit of work receives a scale before execution. The five scales are Project, Release, Feature, Sprint, and Patch.</p>
+  <blockquote><strong>Rule:</strong> Do not run a project process for a patch. Do not run a patch process for a project.</blockquote>
+
+  <h3>3. Mode-constrained LLM sessions</h3>
+  <p>Every AI session runs in one explicit mode. Research Mode investigates. Design Mode writes project memory. Develop Mode changes implementation.</p>
+  <blockquote><strong>Rule:</strong> Declare the mode before the model acts.</blockquote>
+
+  <h3>4. Dry run before mutation</h3>
+  <p>Develop Mode begins with a Dry Run. Implementation begins only after the human reviews the Dry Run and gives explicit authorization.</p>
+  <blockquote><strong>Rule:</strong> No dry run, no implementation.</blockquote>
+
+  <h3>5. Reviewable project memory</h3>
+  <p>Significant work produces artifacts that survive the session. These artifacts let the human inspect scope, verify output, and hand work to another model without losing context.</p>
+  <blockquote><strong>Rule:</strong> If the work matters, it leaves a file trail.</blockquote>
+
+  <h3>6. Handoff by file, not by chat</h3>
+  <p>Model handoff uses files, not prior conversation. A valid handoff survives without the old thread.</p>
+  <blockquote><strong>Rule:</strong> A valid handoff survives without the old thread.</blockquote>
+</DocsLayout>

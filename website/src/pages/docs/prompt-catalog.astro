@@ -1,0 +1,45 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+  title="Prompt Catalog" 
+  currentPath="/docs/prompt-catalog"
+  prev={{ path: '/docs/starter-kit', label: 'Starter Kit' }}
+  next={{ path: '/docs/examples', label: 'Examples' }}
+>
+  <h1>Prompt Catalog</h1>
+  <p>The prompt catalog provides copy-ready operating protocol for each ADDF mode and workflow. The canonical prompt files live in the <code>prompts/</code> folder.</p>
+  
+  <h2>Available Prompts</h2>
+  
+  <h3>Research Prompts</h3>
+  <ul>
+    <li><strong>Research Brief:</strong> Investigate a bounded research question.</li>
+    <li><strong>Source Summary:</strong> Summarize a source for project relevance.</li>
+    <li><strong>Tool Comparison:</strong> Compare tools or approaches before decisions.</li>
+    <li><strong>Open Questions:</strong> Identify unknowns that need tracking.</li>
+    <li><strong>Risk Discovery:</strong> Surface project, security, scope, and handoff risks.</li>
+  </ul>
+
+  <h3>Design Prompts</h3>
+  <ul>
+    <li><strong>Project Initialization:</strong> Create or complete the project brain.</li>
+    <li><strong>Release Planning:</strong> Plan release goals, scope, and sprint breakdown.</li>
+    <li><strong>Sprint Pack Generation:</strong> Generate requirements, blueprint, and acceptance files.</li>
+    <li><strong>Dry Run Review:</strong> Review Develop Mode dry runs.</li>
+    <li><strong>Consistency Audit:</strong> Audit generated files for consistency.</li>
+  </ul>
+
+  <h3>Develop Prompts</h3>
+  <ul>
+    <li><strong>Dry Run:</strong> Produce <code>dry_run.md</code> at Permission Level 0.</li>
+    <li><strong>Implementation Authorization:</strong> Send the exact human authorization message.</li>
+    <li><strong>Implementation Log Update:</strong> Update <code>implementation_log.md</code> after approved changes.</li>
+    <li><strong>Patch Implementation:</strong> Apply a small approved patch.</li>
+  </ul>
+
+  <h2>Handoff and Resumption</h2>
+  <p>Because the prompt catalog is file-based, handing a project from one LLM to another is entirely possible without retaining chat history.</p>
+  <img src="/images/9_Handoff and Resumption.png" alt="Handoff and Resumption" />
+</DocsLayout>

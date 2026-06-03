@@ -1,0 +1,26 @@
+---
+import DocsLayout from '../../layouts/DocsLayout.astro';
+---
+
+<DocsLayout 
+  title="Examples" 
+  currentPath="/docs/examples"
+  prev={{ path: '/docs/prompt-catalog', label: 'Prompt Catalog' }}
+>
+  <h1>Examples</h1>
+  <p>A worked example showing ADDF in practice — the Mini Task Tracker.</p>
+  
+  <h2>Mini Task Tracker</h2>
+  <p>The Mini Task Tracker is a local-only, single-user task management app. It is the canonical small example — chosen because it is bounded enough to show every framework step without the example itself becoming a distraction.</p>
+  <img src="/images/15_Mini Task Tracker scale example.png" alt="Mini Task Tracker Scale" />
+  
+  <h3>Lifecycle Use</h3>
+  <ul>
+    <li><strong>Research Mode:</strong> Investigated localStorage and client-only task persistence.</li>
+    <li><strong>Design Mode:</strong> Produced <code>DOMAIN.md</code>, <code>STATE.md</code>, and sprint pack.</li>
+    <li><strong>Develop Mode:</strong> Ran a Dry Run, implemented TaskForm and TaskList, and verified tests.</li>
+    <li><strong>Design Mode:</strong> Reviewed output against acceptance criteria and updated state.</li>
+  </ul>
+
+
+</DocsLayout>
