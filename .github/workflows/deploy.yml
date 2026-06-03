@@ -26,10 +26,10 @@ jobs:
           node-version: "20"
       - name: Install dependencies
         working-directory: ./website
-        run: npm ci
+        run: npm install
       - name: Build with Astro
         working-directory: ./website
-        run: npm run build
+        run: npx astro build --verbose
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
