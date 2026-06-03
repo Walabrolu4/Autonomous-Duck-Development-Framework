@@ -18,11 +18,11 @@ None
 
 ## Last Completed Sprint
 
-Sprint 006 - Documentation Pages (closed 2026-06-03)
+Sprint 006_2 - GitHub Deployment (closed 2026-06-03)
 
 ## Current Status
 
-Sprint 006 is complete, human-approved, and closed. The website docs are built and visually integrated.
+Sprint 006_2 is complete, human-approved, and closed. The website is configured to deploy to GitHub Pages via GitHub Actions.
 
 ## Next Step
 
