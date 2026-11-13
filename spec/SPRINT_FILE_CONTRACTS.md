@@ -1,6 +1,6 @@
 # ADDF Light — Sprint File Contracts
 
-**Status:** Stage 2 proposed specification · human review required  
+**Status:** Stage 2 approved specification · implementation deferred to Stage 3  
 **Authority:** [Approval Policy](APPROVAL_POLICY.md), [Workflow States](WORKFLOW_STATES.md)  
 **Relates to:** [Project File Contracts](PROJECT_FILE_CONTRACTS.md) · [Validation and Migration](VALIDATION_AND_MIGRATION.md)
 
