@@ -307,7 +307,7 @@ The retrospective is not a substitute for Gate A.
 
 **New feature disguised as bug:** add to backlog or revise sprint design; do not expand scope silently.
 
-**Research spike:** acceptance criteria describe evidence quality, reproducibility or an implementation feasibility demonstration rather than “fun.” Gate I is required **only if** the spike involves code/environment writes; a pure read-only research spike does not receive fictitious authorization. A human review still decides whether the evidence answers the question.
+**Research spike:** acceptance criteria describe evidence quality, reproducibility or an implementation feasibility demonstration rather than “fun.” Read-only **pre-sprint discovery** needs no Gate I. A formal research-spike sprint still creates a bounded, potentially zero-code `PLAN.md` and receives Gate I for that exact plan before entering the implementation/execution status; authorization does **not** grant code changes when the plan specifies none. The human later reviews whether the evidence answers the question at Gate A. This retains the existing Stage 1 state machine without inventing an implementation permission.
 
 **Maintenance sprint:** describe the observable result (e.g., build reproducibility or fixed crash), not a nonexistent player mechanic. Same authorization for file changes and same human acceptance principle.
 
