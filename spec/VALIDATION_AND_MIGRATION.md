@@ -1,6 +1,6 @@
 # ADDF Light — Validation, Ownership, and Migration
 
-**Status:** Stage 2 proposed rules · not yet an executable validator  
+**Status:** Stage 2 approved rules · not yet an executable validator  
 **Depends on:** [Repository Architecture](REPOSITORY_ARCHITECTURE.md) · [Project File Contracts](PROJECT_FILE_CONTRACTS.md) · [Sprint File Contracts](SPRINT_FILE_CONTRACTS.md)  
 **Runtime authority:** [Approval Policy](APPROVAL_POLICY.md) · [Workflow States](WORKFLOW_STATES.md)
 
@@ -183,4 +183,4 @@ Stage 2 is complete only when a human verifies:
 - [ ] Static validators are planned, not falsely claimed to exist now.
 - [ ] Starter kit and prompt development remain unstarted pending signoff.
 
-**The next phase is Stage 3: physically create starter-kit templates + Quick Start and test their shape. Do not begin Stage 3 until the user approves this Stage 2 specification.**
+**Stage 2 approved by the user on 2026-11-12.** Stage 3 will physically create starter-kit templates, the Quick Start, and shape checks; begin Stage 3 only on a separate user instruction. No starter-kit work was done as part of this approval.
