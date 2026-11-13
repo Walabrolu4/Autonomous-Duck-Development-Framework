@@ -1,11 +1,11 @@
 # Stage 02 — Manual Review and Sign-Off
 
 **Milestone:** Repository information architecture and file contracts  
-**Status:** Awaiting human verification  
-**Branch:** `feature/addf-light`  
+**Status:** Approved by the user on 2026-11-12; Stage 2 closed  
+**Branch:** `ADDF_light_games`  
 **Stage scope:** Specifications only — **no starter templates, agent prompts, scripts, logo or website changes**  
 **Previous stage:** Stage 01 approved by the user before work began  
-**Next stage, only after approval:** Stage 03 — starter kit and Quick Start
+**Next stage, only upon separate instruction:** Stage 03 — starter kit and Quick Start
 
 ## 1. Files delivered
 
@@ -40,7 +40,7 @@ The [Stage 01 specification](FRAMEWORK_SPEC.md), [workflow states](WORKFLOW_STAT
 ## 3. Manual verification sequence
 
 ### A. Check branch and paths
-- [ ] Visit `feature/addf-light` (not `main`).
+- [ ] Visit `ADDF_light_games` (not `main`).
 - [ ] Confirm this file and the other four Stage 02 files exist inside `spec/`.
 - [ ] Confirm Stage 01 files remain present.
 - [ ] Confirm no `starter-kit/minimal/`, new `prompts/START.md`, or new Light logo was created by Stage 02.
@@ -107,12 +107,12 @@ The core document contracts are specified, but Stage 03 should make these concre
 4. Design a safe migration prompt for existing projects with filename conflicts.
 5. Prove the template has the **exact** headings/keys defined in these contracts; if a contract is genuinely too cumbersome, return to Stage 02 for revision rather than silently diverging.
 
-## 7. Sign-off
+## 7. Sign-off and branch scope
 
-Review the five Stage 02 files and the checklist above. You can request corrections before approval.
+**Human approval received (2026-11-12):** The user stated, “Stage 2 looks good but close it off by changing the name of the branch to ADDF_light_games since this one is more for game dev than general dev.” The review checklists above remain available for future audits; they are not synthetic claims that each individual checkbox was performed.
 
-Suggested explicit response:
+**Disposition:** Stage 2 approved and closed. This branch is the game-development-focused ADDF Light edition. Stage 1 specifications are preserved, with their canonical branch and game-development scope updated accordingly. No Stage 3 deliverables are authorized by this sign-off.
 
-> “I verified the Stage 02 files and approve the repository architecture and file contracts. Proceed to Stage 03: starter kit and Quick Start. Stop again for my review.”
+**Branch handling:** A new branch named `ADDF_light_games` was created at the former `feature/addf-light` head to preserve all commits. Because the GitHub connector does not expose branch deletion or rename, the former branch may remain until a repository administrator removes it through GitHub's branch settings. That cleanup is separate from Stage 2 approval.
 
-**Do not start Stage 03 until that approval is received.**
+**Next:** Wait for a new, explicit user instruction before starting Stage 3.
