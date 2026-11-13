@@ -1,14 +1,14 @@
 # ADDF Light — Repository Information Architecture
 
-**Status:** Stage 2 proposed specification · human review required  
-**Edition:** ADDF Light (game-development-first, methodology portable)  
+**Status:** Stage 2 approved · architecture contract for ADDF Light Games  
+**Edition:** ADDF Light Games (game-development-focused edition)  
 **Applies to:** This framework repository's Light branch **and** repositories generated from the starter kit  
 **Authority:** [Framework Specification](FRAMEWORK_SPEC.md), [Approval Policy](APPROVAL_POLICY.md), [Workflow States](WORKFLOW_STATES.md)  
 **Companion contracts:** [Project Files](PROJECT_FILE_CONTRACTS.md) · [Sprint Files](SPRINT_FILE_CONTRACTS.md) · [Validation and Migration](VALIDATION_AND_MIGRATION.md)
 
 ## 1. Two kinds of repository — do not confuse them
 
-**A. Framework distribution repository** — the `feature/addf-light` branch of Autonomous Duck Development Framework. It **documents and distributes** ADDF Light. Its `spec/`, `docs/`, `starter-kit/`, `prompts/`, `examples/`, `assets/`, and `website/` directories are framework-authoring materials.
+**A. Framework distribution repository** — the `ADDF_light_games` branch of Autonomous Duck Development Framework. It **documents and distributes** ADDF Light. Its `spec/`, `docs/`, `starter-kit/`, `prompts/`, `examples/`, `assets/`, and `website/` directories are framework-authoring materials.
 
 **B. User's project repository** — a *different*, new or existing game repository. After copying the starter kit, its root `AGENTS.md`, `GAME.md`, `STATE.md`, and other project files describe **that particular game**, not the ADDF Light framework.
 
@@ -30,14 +30,14 @@ During later stages:
 - Preserve full ADDF independently on `main`, with no implicit merge from Light to main.
 - Plan any deletion or website-switch explicitly; publishing/merging requires separate authorization.
 
-**Naming policy:** The working branch is `feature/addf-light`; the branded edition is **ADDF Light** (not “light-mode,” and not a light-colored theme). Paths use `kebab-case` for docs and `UPPER_SNAKE.md` for project-brain documents, as indicated below.
+**Naming policy:** The working branch is `ADDF_light_games`; the working edition is **ADDF Light Games** (a game-development-focused variant, not a light-colored theme). Paths use `kebab-case` for docs and `UPPER_SNAKE.md` for project-brain documents, as indicated below.
 
 ## 3. Planned framework-distribution structure
 
 The following is the **target structure**, not a claim that all paths already exist. A stage owns each group, and no group is created merely to make the tree appear complete.
 
 ```text
-ADDF framework repo — feature/addf-light/
+ADDF framework repo — ADDF_light_games/
 ├── README.md                      # Stage 7/9: edition homepage, routes to Quick Start
 ├── QUICK_START.md                 # Stage 3: shortest executable first-session guide
 ├── MANUAL.md                      # Stage 7: generated complete single-document manual
@@ -183,7 +183,7 @@ One conceptual rule has two life cycles: framework-spec amendments are reviewed 
 
 ## 8. Git and release boundaries
 
-- **Framework repo:** `main` is original ADDF; `feature/addf-light` is the experimental Light edition. No automatic merge into original `main`.
+- **Framework repo:** `main` is original ADDF; `ADDF_light_games` is the game-development-focused Light edition. No automatic merge into original `main`.
 - **Project repo:** ordinary source-controlled game commits; agent implementation occurs on an approved feature branch/worktree when practical. Sprint IDs are not Git branch names.
 - **Publishing:** browser previews, releases, downloadable starter ZIPs, and documentation deployments require explicit target and access review. A successful build does not imply publication approval.
 - **History:** `DECISIONS.md` is append/supersede rather than overwrite; `REVIEW.md` keeps separate review rounds. The agent does not rewrite acceptance history.
@@ -235,4 +235,4 @@ This file is **specification only**. It does not instantiate `starter-kit/minima
 - [ ] Are future stage owners clearly separated?
 - [ ] Are edition/main branch and deployment boundaries explicit?
 
-Human approval of Stage 2 is required before any starter-kit file is created.
+Stage 2 architecture was approved by the user on 2026-11-12. The separate Stage 3 implementation must still be initiated explicitly; no starter-kit files were created as part of Stage 2 closure.
