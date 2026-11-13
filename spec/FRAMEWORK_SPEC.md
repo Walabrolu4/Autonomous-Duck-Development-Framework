@@ -1,9 +1,9 @@
 # ADDF Light — Framework Specification
 
-**Edition:** ADDF Light, first implementation candidate  
+**Edition:** ADDF Light Games — game-development-focused edition  
 **Status:** Phase 01 draft; requires human verification before Phase 02  
 **Parent methodology:** Autonomous Duck Deployment Framework (ADDF), framework v3.5  
-**Canonical branch:** `feature/addf-light`  
+**Canonical branch:** `ADDF_light_games`  
 **Document owner:** framework design / human maintainer  
 **Related contracts:** [Workflow States](WORKFLOW_STATES.md) · [Approval Policy](APPROVAL_POLICY.md) · [Decision Protocol](DECISION_PROTOCOL.md)
 
@@ -15,7 +15,7 @@ ADDF Light is a file-first methodology for collaborative, iterative development 
 
 It is a complete sibling edition, not a stripped-down tutorial and not a different tool product. It must work with human-directed chats as well as coding agents; no account, provider, engine, or paid orchestration service is inherently required.
 
-Game development is the first supported demonstration domain because playable feedback makes the acceptance cycle concrete. The core method must remain adaptable to other software and interactive projects.
+**Game development is the primary scope of this branch.** The Quick Start, starter kit, agent prompts, examples and acceptance practices are designed for building games and interactive playable experiences. The underlying lifecycle may be adapted to other software in the future, but broader general-development support is not a release requirement for `ADDF_light_games`.
 
 A first-time user succeeds when they can:
 
