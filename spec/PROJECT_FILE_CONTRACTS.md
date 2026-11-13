@@ -1,6 +1,6 @@
 # ADDF Light — Project File Contracts
 
-**Status:** Stage 2 proposed specification · not yet a deployed starter kit  
+**Status:** Stage 2 approved specification · starter kit not yet implemented  
 **Companions:** [Repository Architecture](REPOSITORY_ARCHITECTURE.md) · [Sprint File Contracts](SPRINT_FILE_CONTRACTS.md) · [Validation and Migration](VALIDATION_AND_MIGRATION.md)  
 **Normative rules:** [Framework Specification](FRAMEWORK_SPEC.md) · [Approval Policy](APPROVAL_POLICY.md) · [Workflow States](WORKFLOW_STATES.md)
 
