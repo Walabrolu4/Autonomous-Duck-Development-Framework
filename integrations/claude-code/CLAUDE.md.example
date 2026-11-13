@@ -1,0 +1,14 @@
+# Claude Code project guide — ADDF Light Games (optional)
+
+> **Only install as a new CLAUDE.md or carefully merge into an existing file.** Do not blindly overwrite human-owned project instructions.
+
+This game project follows **ADDF Light Games**.
+
+1. Before inspecting arbitrary files, read `SECURITY.md`.
+2. Read `AGENTS.md` as the durable operating contract, then `STATE.md` to find the current stage/status. Read `GAME.md`, `DECISIONS.md`, `planning/BACKLOG.md`, and active sprint files only when needed.
+3. Human design decisions (Gate D), exact implementation authorization (Gate I), and human acceptance (Gate A) are separate and cannot be supplied by AI.
+4. Source edits, commands, packages, public deployment and asset changes require the exact scoped authorization in the active `PLAN.md`; new scope requires re-approval. Separate special permission is needed for destructive, public, paid and sensitive operations.
+5. Never self-accept tests or infer consent from a prior chat. Report one next safe step and stop at each human checkpoint.
+6. For detailed workflow assistance, use the installed `/addf-light-games` project skill when available.
+
+These instructions are *additive*; they do not weaken local security policy, repository restrictions or human commands.
