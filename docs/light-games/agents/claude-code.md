@@ -49,4 +49,4 @@ Claude proposes editing a scene and script for a jump mechanic. The user approve
 
 ## Related
 
-[Claude adapter guide](../../integrations/claude-code/README.md) · [Permissions](permissions.md) · [Handoff](handoff.md)
+[Claude adapter guide](../../../integrations/claude-code/README.md) · [Permissions](permissions.md) · [Handoff](handoff.md)
