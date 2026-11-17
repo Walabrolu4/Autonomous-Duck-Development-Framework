@@ -22,7 +22,7 @@ A sprint can loop from refinement to design when the intended experience changes
 
 `STATE.md` also records one **sprint status**: `discovering`, `designing`, `awaiting_approval`, `implementing`, `refining`, `awaiting_acceptance`, `accepted`, `rejected`, `paused`. For example, `awaiting_approval` is a *status* during Design while the human evaluates a technical plan.
 
-Formal allowed transitions and paused-state recovery are defined in the normative [Workflow States specification](../../spec/WORKFLOW_STATES.md). Do not invent a new status just to describe a particular game-engine task.
+Formal allowed transitions and paused-state recovery are defined in the normative [Workflow States specification](../../../spec/WORKFLOW_STATES.md). Do not invent a new status just to describe a particular game-engine task.
 
 ## The permission rule
 
