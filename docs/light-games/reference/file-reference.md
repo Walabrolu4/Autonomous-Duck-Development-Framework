@@ -51,4 +51,4 @@ When wiki prose conflicts with exact contract fields, consult the approved `spec
 
 ## Related
 
-[Project file contract](../../spec/PROJECT_FILE_CONTRACTS.md) · [Sprint file contract](../../spec/SPRINT_FILE_CONTRACTS.md) · [Sprint overview](../sprints/overview.md)
+[Project file contract](../../../spec/PROJECT_FILE_CONTRACTS.md) · [Sprint file contract](../../../spec/SPRINT_FILE_CONTRACTS.md) · [Sprint overview](../sprints/overview.md)
