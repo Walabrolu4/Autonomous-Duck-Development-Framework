@@ -48,4 +48,4 @@ Stop reading/transmitting, avoid reproducing the secret, record affected path/op
 
 ## Related
 
-[Minimal security file](../../starter-kit/minimal/SECURITY.md) · [Permissions](../agents/permissions.md) · [Failure recovery](failure-recovery.md)
+[Minimal security file](../../../starter-kit/minimal/SECURITY.md) · [Permissions](../agents/permissions.md) · [Failure recovery](failure-recovery.md)
