@@ -20,7 +20,7 @@ Use when choosing the next command for a new or resumed project, switching model
 | **ACCEPT** | A runnable/inspectable deliverable exists | Human Gate A and retrospective |
 | **RESUME** | New session or model context loss | Verified state and one safe next step |
 
-The [canonical prompt catalog](../../prompts/LIGHT_GAMES.md) links to all nine full text files. The original `prompts/README.md` and mode folders still belong to the inherited full ADDF edition.
+The [canonical prompt catalog](../../../prompts/LIGHT_GAMES.md) links to all nine full text files. The original `prompts/README.md` and mode folders still belong to the inherited full ADDF edition.
 
 ## How to select one prompt
 
@@ -52,4 +52,4 @@ Each adapter is a host-friendly wrapper, not an independent approval authority o
 
 ## Related
 
-[Model-neutral catalog](../../prompts/LIGHT_GAMES.md) · [Agent contract](../agents/operating-contract.md) · [Quick reference](../guides/quick-reference.md)
+[Model-neutral catalog](../../../prompts/LIGHT_GAMES.md) · [Agent contract](../agents/operating-contract.md) · [Quick reference](../guides/quick-reference.md)
