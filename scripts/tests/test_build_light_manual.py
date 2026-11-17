@@ -75,11 +75,11 @@ class ManualBuildTests(unittest.TestCase):
     def test_code_fences_do_not_get_link_rewrites(self):
         text = manual.transform_page(
             "guides/intro.md",
-            "# Intro\n\n```md\n[not-real](missing.md)\n```\n\nSee [Intro](intro.md).\n",
-            {"guides/intro.md"},
+            "# Intro\n\n```md\n[not-real](missing.md)\n```\n\nSee [Comparison](../foundations/comparison.md).\n",
+            {"guides/intro.md", "foundations/comparison.md"},
         )
         self.assertIn("[not-real](missing.md)", text)
-        self.assertIn("[Intro](#wiki-guides--intro)", text)
+        self.assertIn("[Comparison](#wiki-foundations--comparison)", text)
 
     def test_deterministic_repeat_generation(self):
         chapters = manual.source_pages()
