@@ -54,7 +54,7 @@ A real existing project can migrate only via an **audited, human-approved mappin
 
 ## References and verification
 
-Original ADDF evidence: [main README](https://github.com/Walabrolu4/Autonomous-Duck-Development-Framework/blob/main/README.md), [original lifecycle](https://github.com/Walabrolu4/Autonomous-Duck-Development-Framework/blob/main/docs/lifecycle/index.md), [original sprint loop](https://github.com/Walabrolu4/Autonomous-Duck-Development-Framework/blob/main/docs/sprint-loop.md), [original starter kit](https://github.com/Walabrolu4/Autonomous-Duck-Development-Framework/blob/main/starter-kit/README.md). Light contracts: [framework specification](../../spec/FRAMEWORK_SPEC.md), [architecture](../../spec/REPOSITORY_ARCHITECTURE.md), [sprint file contracts](../../spec/SPRINT_FILE_CONTRACTS.md).
+Original ADDF evidence: [main README](https://github.com/Walabrolu4/Autonomous-Duck-Development-Framework/blob/main/README.md), [original lifecycle](https://github.com/Walabrolu4/Autonomous-Duck-Development-Framework/blob/main/docs/lifecycle/index.md), [original sprint loop](https://github.com/Walabrolu4/Autonomous-Duck-Development-Framework/blob/main/docs/sprint-loop.md), [original starter kit](https://github.com/Walabrolu4/Autonomous-Duck-Development-Framework/blob/main/starter-kit/README.md). Light contracts: [framework specification](../../../spec/FRAMEWORK_SPEC.md), [architecture](../../../spec/REPOSITORY_ARCHITECTURE.md), [sprint file contracts](../../../spec/SPRINT_FILE_CONTRACTS.md).
 
 ## Related
 
