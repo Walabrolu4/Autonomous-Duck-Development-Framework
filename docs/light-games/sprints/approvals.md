@@ -65,4 +65,4 @@ When an approval can't be verified, degrade to a **safe non-implementation state
 
 ## Related
 
-[Normative approval policy](../../spec/APPROVAL_POLICY.md) · [Plan](planning.md) · [Review](review.md)
+[Normative approval policy](../../../spec/APPROVAL_POLICY.md) · [Plan](planning.md) · [Review](review.md)
