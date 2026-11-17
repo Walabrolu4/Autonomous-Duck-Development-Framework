@@ -69,4 +69,4 @@ If `STATE.md` says `implementing` but `PLAN.md` still shows `gate_i_status: pend
 
 ## Related
 
-[Stage 6 validator guide](../../scripts/README.md) · [Approval gates](../sprints/approvals.md) · [Security](security.md)
+[Stage 6 validator guide](../../../scripts/README.md) · [Approval gates](../sprints/approvals.md) · [Security](security.md)
