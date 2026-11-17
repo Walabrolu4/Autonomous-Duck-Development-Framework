@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#1b4d3e">
+  <meta name="description" content="Duck Dodge: a tiny, dependency-free browser game used to pilot ADDF Light Games.">
+  <title>Duck Dodge — ADDF Light Games Pilot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div><p class="eyebrow">ADDF LIGHT GAMES · PILOT 001</p><h1>DUCK DODGE<span class="period">.</span></h1></div>
+      <p class="subtitle">One duck. Incoming obstacles. How long can you last?</p>
+    </header>
+
+    <section class="game-panel" aria-labelledby="game-heading">
+      <h2 id="game-heading" class="visually-hidden">Duck Dodge game</h2>
+      <div class="hud">
+        <div><span class="hud-label">SURVIVAL</span><strong id="score" aria-live="off">0.0s</strong></div>
+        <div><span class="hud-label">BEST</span><strong id="best">0.0s</strong></div>
+        <div><span class="hud-label">STATE</span><strong id="status">Ready</strong></div>
+      </div>
+      <canvas id="arena" width="720" height="420" aria-label="Duck Dodge arena: move the yellow duck with arrow keys or W A S D to avoid red obstacles." role="img"></canvas>
+      <div class="controls-row">
+        <button id="start" type="button">Start game</button>
+        <button id="pause" type="button" disabled>Pause</button>
+        <span id="announcer" role="status" aria-live="polite">Choose Start game to begin.</span>
+      </div>
+    </section>
+
+    <section class="instructions">
+      <div>
+        <h2>How to play</h2>
+        <p>Move the yellow duck with <strong>arrow keys</strong> or <strong>W A S D</strong>. Avoid the red obstacles moving from right to left. You can move anywhere in the arena, but you cannot leave it.</p>
+        <p>Score is survival time. If you collide, the game ends. Select <strong>Play again</strong> for a fresh run.</p>
+      </div>
+      <div class="mobile-controls" aria-label="On-screen directional controls">
+        <button data-control="up" aria-label="Move up" type="button">↑</button>
+        <div><button data-control="left" aria-label="Move left" type="button">←</button><button data-control="down" aria-label="Move down" type="button">↓</button><button data-control="right" aria-label="Move right" type="button">→</button></div>
+      </div>
+    </section>
+    <footer>Local static demo · No account · No remote services · Built for ADDF Light Games Stage 5</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
