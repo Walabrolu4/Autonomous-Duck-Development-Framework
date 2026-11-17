@@ -52,4 +52,4 @@ Stage 4 created the skill file; live Codex host validation remains a **separate 
 
 ## Related
 
-[Codex adapter guide](../../integrations/codex/README.md) · [File-first resumption](handoff.md) · [Approval gates](../sprints/approvals.md)
+[Codex adapter guide](../../../integrations/codex/README.md) · [File-first resumption](handoff.md) · [Approval gates](../sprints/approvals.md)
