@@ -78,4 +78,4 @@ A PASS means **structural consistency only**, not authenticated human consent.
 
 ## Related
 
-[Quick Start in repo](../../QUICK_START.md) · [Prompt catalog](../reference/prompt-catalog.md) · [Approval gates](../sprints/approvals.md)
+[Quick Start in repo](../../../QUICK_START.md) · [Prompt catalog](../reference/prompt-catalog.md) · [Approval gates](../sprints/approvals.md)
