@@ -56,4 +56,4 @@ The user approves `PLAN.md` r2 for two Phaser source files and a test command. O
 
 ## Related
 
-[OpenClaw adapter](../../integrations/openclaw/README.md) · [Coordinator playbook](../../integrations/openclaw/COORDINATOR_PLAYBOOK.md) · [Permissions](permissions.md)
+[OpenClaw adapter](../../../integrations/openclaw/README.md) · [Coordinator playbook](../../../integrations/openclaw/COORDINATOR_PLAYBOOK.md) · [Permissions](permissions.md)
