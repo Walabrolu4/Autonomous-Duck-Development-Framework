@@ -56,4 +56,4 @@ Log material choices, not every trivial constant or naming decision. A file with
 
 ## Related
 
-[Decision protocol](../../spec/DECISION_PROTOCOL.md) · [Approval gates](../sprints/approvals.md) · [Backlog](../sprints/backlog.md)
+[Decision protocol](../../../spec/DECISION_PROTOCOL.md) · [Approval gates](../sprints/approvals.md) · [Backlog](../sprints/backlog.md)
