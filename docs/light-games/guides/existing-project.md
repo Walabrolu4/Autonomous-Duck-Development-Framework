@@ -30,7 +30,7 @@ Do not run installers, apply a starter kit, change Git settings, rename files or
 | Prior full-ADDF sprint files | Light sprint triplet (optional migration) | Keep originals; map conceptual responsibilities |
 | Source/config/assets | Remain as-is | No adoption-time changes by default |
 
-The Stage 5 [existing-project fixture](../../examples/existing-project/README.md) illustrates an `AGENTS.md` conflict, a read-only audit and a proposal to **merge** instructions instead of replacing them.
+The Stage 5 [existing-project fixture](../../../examples/existing-project/README.md) illustrates an `AGENTS.md` conflict, a read-only audit and a proposal to **merge** instructions instead of replacing them.
 
 ## Phase 3 — Proposed migration plan
 
