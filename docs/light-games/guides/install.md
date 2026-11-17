@@ -25,7 +25,7 @@ your-game/
     └── BACKLOG.md
 ```
 
-Source: [Light starter kit](../../starter-kit/LIGHT_GAMES.md) and [minimal folder](../../starter-kit/minimal/).
+Source: [Light starter kit](../../../starter-kit/LIGHT_GAMES.md) and [minimal folder](../../../starter-kit/minimal/).
 
 The initial `STATE.md` reads `lifecycle_stage: research`, `sprint_status: discovering`, `active_sprint: none`, `authorized: no`. That's correct. The game title, engine and prototype goal may be `unknown`.
 
