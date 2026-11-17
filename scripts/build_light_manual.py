@@ -235,6 +235,9 @@ def main(argv=None) -> int:
             for error in errors:
                 print("ERROR: " + error, file=sys.stderr)
             return 1
+        if args.verify_links and not (args.write or args.check):
+            print(f"PASS: {len(chapters)} wiki chapters listed and relative links resolve.")
+            return 0
         generated = build_manual(chapters)
     except (OSError, ValueError, UnicodeError) as error:
         print(f"ERROR: {error}", file=sys.stderr)
