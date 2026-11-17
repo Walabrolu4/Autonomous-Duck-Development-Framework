@@ -1,0 +1,29 @@
+name: ADDF Light Games — Contract Validation
+
+# Validation is isolated to the game-development branch. It never deploys
+# the website, publishes files, writes to main, or alters project source.
+on:
+  push:
+    branches: [ADDF_light_games]
+    paths:
+      - 'scripts/**'
+      - 'starter-kit/minimal/**'
+      - 'starter-kit/sprint-template/**'
+      - '.github/workflows/validate-light-games.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out ADDF Light Games
+        uses: actions/checkout@v4
+      - name: Show Python version
+        run: python3 --version
+      - name: Validate approved Stage 3 blank templates
+        run: python3 scripts/validate_light.py starter-kit/minimal --mode template --sprint-template starter-kit/sprint-template
+      - name: Run Stage 6 regression tests
+        run: python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v
