@@ -7,6 +7,8 @@ on:
     branches: [ADDF_light_games]
     paths:
       - 'scripts/**'
+      - 'docs/light-games/**'
+      - 'MANUAL.md'
       - 'examples/**'
       - 'starter-kit/minimal/**'
       - 'starter-kit/sprint-template/**'
@@ -26,6 +28,8 @@ jobs:
         run: python3 --version
       - name: Validate approved Stage 3 blank templates
         run: python3 scripts/validate_light.py starter-kit/minimal --mode template --sprint-template starter-kit/sprint-template
+      - name: Check Stage 7 canonical wiki links and manifest
+        run: python3 scripts/build_light_manual.py --verify-links
       - name: Run Stage 6 regression tests
         run: python3 -m unittest discover -s scripts/tests -p 'test_*.py' -v
       - name: Run Stage 5 game and synthetic approval regressions
