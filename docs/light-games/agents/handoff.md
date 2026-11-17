@@ -56,4 +56,4 @@ Record any real decisions, new blockers, actual changed paths/tests, last valid 
 
 ## Related
 
-[RESUME prompt](../../prompts/RESUME.md) · [Coordinator playbook](../../integrations/openclaw/COORDINATOR_PLAYBOOK.md) · [Current state](../reference/file-reference.md)
+[RESUME prompt](../../../prompts/RESUME.md) · [Coordinator playbook](../../../integrations/openclaw/COORDINATOR_PLAYBOOK.md) · [Current state](../reference/file-reference.md)
