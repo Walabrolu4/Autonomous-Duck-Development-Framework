@@ -9,6 +9,8 @@ This is the **canonical Markdown wiki** for the game-development-focused Light e
 
 **Compare editions:** [Original ADDF vs. ADDF Light Games](foundations/comparison.md) — full side-by-side table of philosophy, lifecycles, files, permission gates, onboarding, and recommended use cases.
 
+**Remote work:** [Remote Development & Access](reference/remote-development.md) — iPad / T3 Code / VS Code, secure previews, testing and streamed game engines.
+
 **One complete document:** [Generated MANUAL.md](../../MANUAL.md) — all chapters below, built from these wiki pages; do not edit it manually.
 
 ## Wiki navigation
@@ -76,6 +78,7 @@ This is the **canonical Markdown wiki** for the game-development-focused Light e
 - [Prompt Catalog](reference/prompt-catalog.md)
 - [Troubleshooting](reference/troubleshooting.md)
 - [Faq](reference/faq.md)
+- [Remote Development & Access](reference/remote-development.md)
 
 ## How to use this wiki
 
