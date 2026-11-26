@@ -41,3 +41,4 @@ reference/file-reference.md
 reference/prompt-catalog.md
 reference/troubleshooting.md
 reference/faq.md
+reference/remote-development.md
