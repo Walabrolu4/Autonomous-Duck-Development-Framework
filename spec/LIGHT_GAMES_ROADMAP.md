@@ -94,6 +94,8 @@ The central experience becomes **one game project, one visible conversation, man
 - Extend `examples/` with same-conversation and same-thread scenarios and exact expected outcomes.
 - Add synthetic routing/gate boundary tests; update `scripts/` validator only for real new contract rules, without claiming it authenticates human consent.
 - Update `docs/light-games/` wiki guidance (first session, prompt catalog, handoff, Codex, optional provider adapters, FAQ and limitations) and the ordered `manifest.txt` as needed.
+- Include the **Remote Development and Access** guide (`docs/light-games/reference/remote-development.md`) as a required framework reference chapter, with iPad + T3 Code + VS Code remote setup, Git worktree verification, private preview/port forwarding, approved test execution, streamed-engine caveats, source-control safety, security and Gate A playtest evidence. Remote software and any per-game runbook remain optional.
+- Test remote-access workflow examples by distinguishing documentation-only guidance, automated checks and actual human device/host trials. Do not mark remote iPad, preview or native engine streaming verified without a real run.
 - **Regenerate root `MANUAL.md` from source wiki** using `python3 scripts/build_light_manual.py --write`; CI must pass `--check --verify-links`.
 - Update Light-only CI/regression coverage and a Stage 7B review checklist; leave inherited full ADDF site and `main` unchanged.
 
