@@ -22,7 +22,8 @@ import build_light_manual as manual
 class ManualBuildTests(unittest.TestCase):
     def test_manifest_contains_complete_wiki(self):
         pages = manual.source_pages()
-        self.assertEqual(len(pages), 41)
+        self.assertEqual(len(pages), 42)
+        self.assertIn("reference/remote-development.md", pages)
         self.assertEqual(pages[0], "index.md")
         self.assertIn("foundations/comparison.md", pages)
         self.assertIn("quality/validation.md", pages)
